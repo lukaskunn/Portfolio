@@ -1,13 +1,15 @@
 import React from 'react';
+import PageHeader from '../../components/PageHeader'
 
-// import { Container } from './styles';
+import './styles.css';
 
 function Landing() {
   return (
-      <div>
+      <div className="landing">
+          <PageHeader />
           <h1>Landing</h1>
       </div>
   );
 }
 
-export default Landing;
+export default Landing
