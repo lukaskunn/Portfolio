@@ -32,6 +32,7 @@ function PageHeader() {
             <div className="menu">
                 <Link to="/" className="menu-item">Home</Link>
                 <Link className="menu-item">About</Link>
+                <Link className="menu-item">Services</Link>
                 <Link className="menu-item">Projects</Link>
                 <Link className="menu-item">Contacts</Link>
             </div>
