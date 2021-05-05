@@ -1,27 +1,36 @@
 import React from "react";
 import { BsPhone } from "react-icons/bs";
 import { IconContext } from "react-icons/lib";
+import {
+  FaLaptopCode,
+  FaCss3,
+  FaReact,
+  FaMobileAlt,
+  FaCode,
+} from "react-icons/fa";
 
 import "./styles.css";
 
 function ServiceItem(props) {
   const icons = {
-    phone: BsPhone,
+    phone: FaMobileAlt,
+    laptop: FaLaptopCode,
+    css: FaCss3,
+    react: FaReact,
+    code: FaCode,
   };
 
   const CustomTag = icons[props.icon];
   return (
     <div className="service-item">
-      <IconContext.Provider value={{ size: "3em" }}>
+      <IconContext.Provider value={{ size: "3.5em" }}>
         <div>
           <CustomTag />
         </div>
       </IconContext.Provider>
 
-      <h2 className="service-item-title">Desenvolvedor de Aplicativos</h2>
-      <h3 className="description">
-        Desenvolvedor de Aplicativos Desenvolvimento
-      </h3>
+      <h2 className="service-item-title">{props.title}</h2>
+      <h3 className="description">{props.description}</h3>
     </div>
   );
 }
