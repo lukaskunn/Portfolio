@@ -21,11 +21,6 @@ function ProjectItem(props) {
 
     &:hover {
       background-image: url(${images[props.background]});
-      filter: grayscale(0%);
-      width: 250px;
-      height: 250px;
-      box-shadow: 0px 0px, 0px 0px;
-      border: 2px outset white;
     }
   `;
 
