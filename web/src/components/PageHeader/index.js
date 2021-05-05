@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import {Link} from 'react-router-dom';
-import styled from 'styled-components'
+import { HashLink } from 'react-router-hash-link';
 
 import './styles.css';
 
@@ -30,11 +30,11 @@ function PageHeader() {
                 <h3>Lucas OLIVEIRA</h3>
             </div>
             <div className="menu">
-                <Link to="/" className="menu-item">Home</Link>
-                <Link className="menu-item">About</Link>
-                <Link className="menu-item">Services</Link>
-                <Link className="menu-item">Projects</Link>
-                <Link className="menu-item">Contacts</Link>
+                <HashLink smooth to="/#home" className="menu-item">Home</HashLink>
+                <HashLink smooth to="/#about" className="menu-item">About</HashLink>
+                <HashLink smooth to="/#services" className="menu-item">Services</HashLink>
+                <HashLink smooth to="/#projects" className="menu-item">Projects</HashLink>
+                <HashLink smooth to="/#contact" className="menu-item">Contacts</HashLink>
             </div>
         </div>
     );
