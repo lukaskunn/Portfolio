@@ -4,8 +4,24 @@ const GlobalStyle = createGlobalStyle`
     @import url(https://fonts.googleapis.com/css2?family=Crimson+Text:wght@100;200;300;400;500;600;700&display=swap);
   html{
     max-width: 100%;
-    overflow-x: hidden;
   }
+
+  ::-webkit-scrollbar {
+  width: 13px;
+}
+
+::-webkit-scrollbar-track {
+  width: 10px;
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #444;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
   
   body {
     width: 100vw;
@@ -22,7 +38,6 @@ const GlobalStyle = createGlobalStyle`
 
   @media(max-width: 1000px){
     html, body {
-      overflow-x: hidden;
       z-index: 3;
     }
   }

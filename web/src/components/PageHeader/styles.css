@@ -63,10 +63,18 @@
 }
 
 .menu-item:visited {
-    color: white;
+    color:  white;
 }
 
 .menu-item:visited:hover{
+    color: red;
+}
+
+.scrolled .menu-item {
+    color: black;
+}
+
+.scrolled .menu-item:hover {
     color: red;
 }
 
@@ -81,7 +89,8 @@
 @media(max-width: 1000px){
     .page-header{
         width: 100vw;
-        background: #111;
+        background: transparent;
+        color: white;
     }
 
     .scrolled{
@@ -118,8 +127,38 @@
         align-items: center;
         justify-content: center;
         height: 10vw;
-        padding: 20px 0px;
+        padding: 0px 0px;
+        color: white;
       }
+
+      
+.menu-item:hover{
+    color: red;
+}
+
+.menu-item:visited {
+    color:  white;
+}
+
+.menu-item:visited:hover{
+    color: red;
+}
+
+.scrolled .menu-item {
+    color: white;
+}
+
+.scrolled .menu-item:hover {
+    color: red;
+}
+
+.scrolled .menu-item:visited {
+    color: white;
+}
+
+.scrolled .menu-item:visited:hover {
+    color: red;
+}
 
       .mobile-option {
         display: block;
