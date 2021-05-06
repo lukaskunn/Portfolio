@@ -1,5 +1,4 @@
 import React from "react";
-import { BsPhone } from "react-icons/bs";
 import { IconContext } from "react-icons/lib";
 import {
   FaLaptopCode,

@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import { IoClose } from "react-icons/io5";
 import { HiMenu } from "react-icons/hi";

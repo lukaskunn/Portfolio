@@ -8,7 +8,6 @@ import { HiMail } from "react-icons/hi";
 
 import "./styles.css";
 import { IconContext } from "react-icons/lib";
-import { Link } from "react-router-dom";
 import { HashLink } from 'react-router-hash-link'
 
 function Landing() {
