@@ -9,6 +9,7 @@ import { HiMail } from "react-icons/hi";
 import "./styles.css";
 import { IconContext } from "react-icons/lib";
 import { Link } from "react-router-dom";
+import { HashLink } from 'react-router-hash-link'
 
 function Landing() {
   return (
@@ -21,17 +22,12 @@ function Landing() {
             <h4 className="sub-title">Computer Science Student</h4>
             <h4 className="sub-title">technology enthusiast</h4>
             <IconContext.Provider value={{ size: "2.5em" }}>
-              <Link
-                to={{
-                  pathname: "/",
-                  search: "?sort=name",
-                  hash: "#about",
-                  state: { fromDashboard: true },
-                }}
+              <HashLink
+                smooth to="/#about" 
                 className="page-link"
               >
                 <FiChevronDown className="down-icon" />
-              </Link>
+              </HashLink>
             </IconContext.Provider>
           </div>
         </div>
