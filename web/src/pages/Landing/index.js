@@ -98,7 +98,7 @@ function Landing() {
         <div className="contact" id="contact">
           <h2>CONTACT</h2>
           <div className="contacts">
-              <a href="https://www.linkedin.com/in/lucas-oliveira-997810198/" target="_blank" className="contact-item">
+              <a href="https://www.linkedin.com/in/lucas-oliveira-997810198/" target="_blank" className="contact-item" rel="noopener noreferrer">
                 <IconContext.Provider value={{ size: "1.3em" }}>
                   <div>
                     <FaLinkedin />
@@ -106,7 +106,7 @@ function Landing() {
                 </IconContext.Provider>
                 <h4>linkedin.com/in/lucas-oliveira-997810198/</h4>
               </a>
-              <a href="https://github.com/lukaskunn" target="_blank"className="contact-item">
+              <a href="https://github.com/lukaskunn" target="_blank"className="contact-item" rel="noopener noreferrer">
                 <IconContext.Provider value={{ size: "1.3em" }}>
                   <div>
                     <FaGithub />
