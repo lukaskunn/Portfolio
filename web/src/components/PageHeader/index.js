@@ -42,7 +42,7 @@ function PageHeader() {
             className="menu-item"
             onClick={closeMobileMenu}
           >
-            Home
+            Inicio
           </HashLink>
           <HashLink
             smooth
@@ -50,7 +50,7 @@ function PageHeader() {
             className="menu-item"
             onClick={closeMobileMenu}
           >
-            About
+            Sobre
           </HashLink>
           <HashLink
             smooth
@@ -58,7 +58,7 @@ function PageHeader() {
             className="menu-item"
             onClick={closeMobileMenu}
           >
-            Services
+            Serviços
           </HashLink>
           <HashLink
             smooth
@@ -66,7 +66,7 @@ function PageHeader() {
             className="menu-item"
             onClick={closeMobileMenu}
           >
-            Projects
+            Projetos
           </HashLink>
           <HashLink
             smooth
@@ -74,7 +74,7 @@ function PageHeader() {
             className="menu-item"
             onClick={closeMobileMenu}
           >
-            Contacts
+            Contatos
           </HashLink>
         </div>
         <div className="mobile-menu" onClick={handleClick}>
