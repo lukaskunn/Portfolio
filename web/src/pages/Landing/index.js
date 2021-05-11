@@ -8,7 +8,7 @@ import { HiMail } from "react-icons/hi";
 
 import "./styles.css";
 import { IconContext } from "react-icons/lib";
-import { HashLink } from 'react-router-hash-link'
+import { HashLink } from "react-router-hash-link";
 
 function Landing() {
   return (
@@ -21,10 +21,7 @@ function Landing() {
             <h4 className="sub-title">Computer Science Student</h4>
             <h4 className="sub-title">technology enthusiast</h4>
             <IconContext.Provider value={{ size: "2.5em" }}>
-              <HashLink
-                smooth to="/#about" 
-                className="page-link"
-              >
+              <HashLink smooth to="/#about" className="page-link">
                 <FiChevronDown className="down-icon" />
               </HashLink>
             </IconContext.Provider>
@@ -32,39 +29,40 @@ function Landing() {
         </div>
 
         <div className="about" id="about">
-          <h2>ABOUT</h2>
+          <h2>SOBRE MIM</h2>
           <div className="about-text">
             <h3 className="name">Lucas Oliveira</h3>
             <i>
               <p>
-                Computer Science student (05/08) and technology enthusiast.
-                Working in 2 web/mobile projects and 1 arduino project. I
-                started programming when i was 16 years old making small games
-                for fun. lover of JavaScript and React, actually working with IT
-                support but looking for jobs for web development or programming.
-                aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                19 anos, estudante de Ciência da Comptação e entusiasta da
+                tecnologia sempre buscando entender como as minimas coisas
+                funcionam e apaixonado por competições de programação.
+                Trabalhando a 2 anos com Infraestrutura e IT suporte e
+                atualmente trabalhando em 2 projetos web/mobile e 1 projeto de
+                automação com arduino. Iniciei no mundo da programação com 16
+                anos fazendo pequenos jogos por diversão e acabei me apaixonando
+                por tecnologia.
               </p>
               <p>
-                Computer Science student (05/08) and technology enthusiast.
-                Working in 2 web/mobile projects and 1 arduino project. I
-                started programming when i was 16 years old making small games
-                for fun. lover of JavaScript and React, actually working with IT
-                support but looking for jobs for web development or programming.
-                aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                Amante de JavaScript e React, me interessei por front-end e
+                back-end no inicio da faculdade e desde então venho
+                desenvolvendo projetos para melhorar o uso dessas tecnologias.
+                Estou sempre procurando novas ferramentas e tecnologias para
+                desenvolver meu conhecimento. Atualmente estou estudando Elixir
+                para projetos de back-end e React Native e Flutter para projetos
+                mobile. Estou sempre buscando aprender coisas novas.
               </p>
               <p>
-                Computer Science student (05/08) and technology enthusiast.
-                Working in 2 web/mobile projects and 1 arduino project. I
-                started programming when i was 16 years old making small games
-                for fun. lover of JavaScript and React, actually working with IT
-                support but looking for jobs for web development or programming.
-                aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                Já desenvolvi projetos dentro da faculdade com C/C++ e Java, e
+                projetos de analise de dados com Python. Atualmente me
+                desenvolvendo com Banco de Dados e procurando entender melhor
+                sobre Arquitetura de computadores.
               </p>
             </i>
           </div>
         </div>
         <div className="services" id="services">
-          <h2>SERVICES</h2>
+          <h2>SERVIÇOS</h2>
           <div className="services-itens">
             <ServiceItem
               title="Desenvolvedor de Aplicativos"
@@ -90,39 +88,49 @@ function Landing() {
           </div>
         </div>
         <div className="projects" id="projects">
-          <h2>PROJECTS</h2>
+          <h2>PROJETOS</h2>
           <div className="project-itens">
             <ProjectItem title="Today in History" background="todayInHistory" />
           </div>
         </div>
         <div className="contact" id="contact">
-          <h2>CONTACT</h2>
+          <h2>CONTATOS</h2>
           <div className="contacts">
-              <a href="https://www.linkedin.com/in/lucas-oliveira-997810198/" target="_blank" className="contact-item" rel="noopener noreferrer">
-                <IconContext.Provider value={{ size: "1.3em" }}>
-                  <div>
-                    <FaLinkedin />
-                  </div>
-                </IconContext.Provider>
-                <h4>linkedin.com/in/lucas-oliveira-997810198/</h4>
-              </a>
-              <a href="https://github.com/lukaskunn" target="_blank"className="contact-item" rel="noopener noreferrer">
-                <IconContext.Provider value={{ size: "1.3em" }}>
-                  <div>
-                    <FaGithub />
-                  </div>
-                </IconContext.Provider>
-                <h4>github.com/lukaskunn</h4>
-              </a>
+            <a
+              href="https://www.linkedin.com/in/lucas-oliveira-997810198/"
+              target="_blank"
+              className="contact-item"
+              rel="noopener noreferrer"
+            >
+              <IconContext.Provider value={{ size: "1.3em" }}>
+                <div>
+                  <FaLinkedin />
+                </div>
+              </IconContext.Provider>
+              <h4>linkedin.com/in/lucas-oliveira-997810198/</h4>
+            </a>
+            <a
+              href="https://github.com/lukaskunn"
+              target="_blank"
+              className="contact-item"
+              rel="noopener noreferrer"
+            >
+              <IconContext.Provider value={{ size: "1.3em" }}>
+                <div>
+                  <FaGithub />
+                </div>
+              </IconContext.Provider>
+              <h4>github.com/lukaskunn</h4>
+            </a>
 
-              <div className="contact-item">
-                <IconContext.Provider value={{ size: "1.3em" }}>
-                  <div>
-                    <HiMail />
-                  </div>
-                </IconContext.Provider>
-                <h4>lucassioliveira098@gmail.com</h4>
-              </div>
+            <div className="contact-item">
+              <IconContext.Provider value={{ size: "1.3em" }}>
+                <div>
+                  <HiMail />
+                </div>
+              </IconContext.Provider>
+              <h4>lucassioliveira098@gmail.com</h4>
+            </div>
           </div>
         </div>
       </div>
