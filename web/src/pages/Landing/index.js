@@ -34,29 +34,13 @@ function Landing() {
             <h3 className="name">Lucas Oliveira</h3>
             <i>
               <p>
-                19 anos, estudante de Ciência da Comptação e entusiasta da
-                tecnologia sempre buscando entender como as minimas coisas
-                funcionam e apaixonado por competições de programação.
-                Trabalhando a 2 anos com Infraestrutura e IT suporte e
-                atualmente trabalhando em 2 projetos web/mobile e 1 projeto de
-                automação com arduino. Iniciei no mundo da programação com 16
-                anos fazendo pequenos jogos por diversão e acabei me apaixonando
-                por tecnologia.
+              20 anos, estudante de Ciência da Computação e entusiasta da tecnologia, sempre buscando entender como as mínimas coisas funcionam e apaixonado por competições de programação. Trabalhando há 2 anos com Infraestrutura e IT suporte, atualmente trabalhando em 2 projetos web/mobile e 1 projeto de automação com arduino. Iniciei no mundo da programação com 16 anos fazendo pequenos jogos por diversão e acabei me apaixonando por tecnologia.
               </p>
               <p>
-                Amante de JavaScript e React, me interessei por front-end e
-                back-end no inicio da faculdade e desde então venho
-                desenvolvendo projetos para melhorar o uso dessas tecnologias.
-                Estou sempre procurando novas ferramentas e tecnologias para
-                desenvolver meu conhecimento. Atualmente estou estudando Elixir
-                para projetos de back-end e React Native e Flutter para projetos
-                mobile. Estou sempre buscando aprender coisas novas.
+              Amante de JavaScript e React, me interessei por front-end e back-end no início da faculdade e desde então venho desenvolvendo projetos para melhorar o uso dessas tecnologias. Estou sempre procurando novas ferramentas e tecnologias para desenvolver meu conhecimento. Atualmente estou estudando Elixir para projetos de back-end e React Native e Flutter para projetos mobile. Estou sempre buscando aprender coisas novas.
               </p>
               <p>
-                Já desenvolvi projetos dentro da faculdade com C/C++ e Java, e
-                projetos de analise de dados com Python. Atualmente me
-                desenvolvendo com Banco de Dados e procurando entender melhor
-                sobre Arquitetura de computadores.
+              Já desenvolvi projetos na faculdade com C/C++ e Java, e projetos de análise de dados com Python. Atualmente me desenvolvendo com Banco de Dados e procurando entender melhor sobre Arquitetura de computadores.
               </p>
             </i>
           </div>
