@@ -20,6 +20,8 @@
   z-index: -1;
 }
 
+
+
 .title {
   font-size: 1.9rem;
   height: 100vh;
@@ -99,6 +101,12 @@
 .project-itens {
   display: flex;
   flex-direction: row;
+  text-decoration: none; 
+  color: white;
+}
+
+.project-itens:hover{
+  text-decoration: none;
 }
 
 .project-itens div + div {
