@@ -8,12 +8,23 @@
   transition: all 0.2s ease-out;
   font-size: 1.6rem;
   z-index: 0;
+  text-decoration: none;
+}
+
+.project-item:visited {
+  text-decoration: none;
 }
 
 .project-item:hover {
-  width: 300px;
-  height: 300px;
   font-size: 1.4rem;
+}
+
+.project-item-title {
+  text-decoration: none;
+}
+
+.project-item-title:visited {
+  text-decoration: none;
 }
 
 .project-item:hover > div {

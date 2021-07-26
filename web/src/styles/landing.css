@@ -14,10 +14,14 @@
       rgba(0, 0, 0, 0.93),
       rgba(0, 0, 0, 0.93)
     ),
-    url("../../static/images/akira-background.png");
+    url("https://i.imgur.com/QFDIiWn.png");
   background-size: cover;
   background-repeat: no-repeat;
   z-index: -1;
+}
+
+.content {
+  width: 100%;
 }
 
 
@@ -83,38 +87,17 @@
 }
 
 .projects {
-  height: 50vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  background-color: #090909;
   padding: 50px 0px 50px 0px;
-  z-index: -1;
 }
 
-.projects > h2 {
-  margin-top: 50px;
-  margin-bottom: -10px;
-}
-
-.project-itens {
-  display: flex;
-  flex-direction: row;
-  text-decoration: none; 
-  color: white;
-}
-
-.project-itens:hover{
-  text-decoration: none;
-}
-
-.project-itens div + div {
-  margin-left: 25px;
-}
-
-.projects h2 {
-  margin-bottom: 60px;
+.project-list {
+  display: grid;
+  grid-gap: 70px;
+  grid-template-columns: auto auto auto;
+  margin: 75px;
 }
 
 .services {

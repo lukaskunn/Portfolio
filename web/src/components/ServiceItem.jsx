@@ -8,7 +8,7 @@ import {
   FaCode,
 } from "react-icons/fa";
 
-import "./styles.css";
+import "../styles/service-item.css";
 
 function ServiceItem(props) {
   const icons = {

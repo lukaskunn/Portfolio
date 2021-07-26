@@ -1,12 +1,12 @@
 import React from "react";
-import PageHeader from "../../components/PageHeader";
-import ProjectItem from "../../components/ProjectItem";
-import ServiceItem from "../../components/ServiceItem";
+import PageHeader from "../components/PageHeader.jsx";
+import ProjectItem from "../components/ProjectItem.jsx";
+import ServiceItem from "../components/ServiceItem.jsx";
 import { FiChevronDown } from "react-icons/fi";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { HiMail } from "react-icons/hi";
 
-import "./styles.css";
+import "../styles/landing.css";
 import { IconContext } from "react-icons/lib";
 import { HashLink } from "react-router-hash-link";
 
@@ -68,7 +68,6 @@ function Landing() {
               title="Desenvolvedor de Aplicativos"
               description="Desenvolvedor de Aplicativos Mobile para IOS e Android baseados em React native e Flutter"
               icon="phone"
-              className="item1"
             />
             <ServiceItem
               title="Criação de Sites"
@@ -89,14 +88,35 @@ function Landing() {
         </div>
         <div className="projects" id="projects">
           <h2>PROJETOS</h2>
-          <a
-            href="https://github.com/lukaskunn/today-in-history-web"
-            className="project-itens"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <ProjectItem title="Today in History" background="todayInHistory" />
-          </a>
+          <div className="project-list">
+            <a
+              href="https://github.com/lukaskunn/corebiz_interview"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <ProjectItem
+                title="Corebiz eCommerce"
+                background="corebizEcommerce"
+              />
+            </a>
+            <a
+              href="https://github.com/lukaskunn/gaminfo"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <ProjectItem title="Gaminfo" background="gaminfo" />
+            </a>
+            <a
+              href="https://github.com/lukaskunn/today-in-history-web"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <ProjectItem
+                title="Today in History"
+                background="todayInHistory"
+              />
+            </a>
+          </div>
         </div>
         <div className="contact" id="contact">
           <h2>CONTATOS</h2>

@@ -1,11 +1,13 @@
 import React from "react";
 import styled from "styled-components";
 
-import "./styles.css";
-import todayInHistory from "../../static/images/today_in_history_print1.PNG";
+import "../styles/project-item.css";
+
 
 const images = {
-  todayInHistory: todayInHistory,
+  todayInHistory: "https://i.imgur.com/PPynIVd.png",
+  corebizEcommerce: "https://i.imgur.com/cVcTa32.png",
+  gaminfo: "https://i.imgur.com/lCvzWvZ.png"
 };
 
 function ProjectItem(props) {

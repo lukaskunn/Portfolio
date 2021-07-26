@@ -3,7 +3,7 @@ import { HashLink } from "react-router-hash-link";
 import { IoClose } from "react-icons/io5";
 import { HiMenu } from "react-icons/hi";
 
-import "./styles.css";
+import "../styles/page-header.css";
 
 function PageHeader() {
   const [scrolled, setScrolled] = useState(false);
