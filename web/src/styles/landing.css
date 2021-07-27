@@ -100,6 +100,14 @@
   margin: 75px;
 }
 
+.project-list > a {
+  text-decoration: none;
+}
+
+.project-list > a:visited {
+  text-decoration: none;
+}
+
 .services {
   display: flex;
   flex-direction: column;
@@ -207,6 +215,12 @@
 
   .contact-item{
     font-size: 1rem;
+  }
+  
+  .project-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
 }
