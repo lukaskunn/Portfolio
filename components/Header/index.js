@@ -1,11 +1,38 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import headerStyles from "./header.module.scss";
 
 function Header() {
+  const [headerBackground, setHeaderBackground] = useState("none");
+
+  const listenScrollEvent = (event) => {
+    if (window.scrollY < 73) {
+      return setHeaderBackground("none");
+    } else if (window.scrollY > 70) {
+      return setHeaderBackground("black");
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", listenScrollEvent);
+
+    return () => window.removeEventListener("scroll", listenScrollEvent);
+  }, []);
+
   return (
-    <div className={headerStyles.header}>
-      <h1 className={headerStyles.title}>Lucas Oliveira</h1>
+    <header
+      className={headerStyles.header}
+      style={{
+        background: headerBackground,
+        justifyContent: headerBackground == "none" ? "center" : "space-between",
+      }}
+    >
+      <h1
+        className={headerStyles.title}
+        style={{ display: headerBackground == "none" ? "none" : "block" }}
+      >
+        Lucas Oliveira
+      </h1>
       <div className={headerStyles.menu}>
         <a>About</a>
         <a>Resume</a>
@@ -13,7 +40,7 @@ function Header() {
         <a>Works</a>
         <a>Contact</a>
       </div>
-    </div>
+    </header>
   );
 }
 
