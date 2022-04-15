@@ -20,35 +20,6 @@
     max-width: 1920px;
   }
 
-  .white_border {
-    border: 3px white solid;
-    position: absolute;
-    z-index: 3;
-    transform: rotate(-30deg);
-
-    animation: width_change 4s infinite, spin 7s infinite;
-    animation-direction: alternate-reverse;
-  }
-
-  .white_border2 {
-    border: 3px white solid;
-    position: absolute;
-    z-index: 3;
-    transform: rotate(-30deg);
-
-    animation: width_change2 4s infinite, spin2 7s infinite;
-    animation-direction: alternate-reverse;
-  }
-  .white_border3 {
-    border: 3px white solid;
-    position: absolute;
-    z-index: 3;
-    transform: rotate(-30deg);
-
-    animation: width_change3 6s infinite, spin3 4s infinite;
-    animation-direction: alternate-reverse;
-  }
-
   .home__title {
     position: absolute;
     z-index: 3;
@@ -58,6 +29,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    // mix-blend-mode: difference;
 
     .title {
       letter-spacing: 15px;
@@ -72,57 +44,22 @@
     }
   }
 
-  @keyframes width_change {
-    from {
-      width: 600px;
-      height: 200px;
-    }
-    to {
-      width: 400px;
-      height: 300px;
-    }
+  #canvas_container {
+    position: absolute;
+    // left: 0px;
+    // top: 0px;
+    z-index: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: Black;
   }
 
-  @keyframes spin {
-    100% {
-      -webkit-transform: rotate(30deg);
-      transform: rotate(30deg);
-    }
-  }
-
-  @keyframes width_change2 {
-    from {
-      width: 200px;
-      height: 100px;
-    }
-    to {
-      width: 550px;
-      height: 400px;
-    }
-  }
-
-  @keyframes spin2 {
-    100% {
-      -webkit-transform: rotate(25deg);
-      transform: rotate(25deg);
-    }
-  }
-
-  @keyframes width_change3 {
-    from {
-      width: 300px;
-      height: 200px;
-    }
-    to {
-      width: 350px;
-      height: 400px;
-    }
-  }
-
-  @keyframes spin3 {
-    100% {
-      -webkit-transform: rotate(25deg);
-      transform: rotate(35deg);
-    }
+  .canvas_home {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    z-index: 0;
   }
 }
