@@ -44,6 +44,23 @@
     }
   }
 
+  .scrollPage {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    bottom: 100px;
+    z-index: 1;
+    border: none;
+    border-radius: 50%;
+    color: white;
+
+    transition: 0.2s all ease-in;
+
+    &sgv {
+      transition: 0.2s all ease-in;
+    }
+  }
+
   #canvas_container {
     position: absolute;
     // left: 0px;

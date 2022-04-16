@@ -1,9 +1,11 @@
+/* eslint-disable @next/next/link-passhref */
 import React, { useRef, useState } from "react";
 import styles from "./Landing.module.scss";
 
+import Link from "next/link";
 import { Canvas, useFrame } from "@react-three/fiber";
-import { Edges, Reflector } from "@react-three/drei";
-import { KernelSize } from "postprocessing";
+import { Edges, MeshReflectorMaterial, Reflector } from "@react-three/drei";
+import { FiChevronDown } from "react-icons/fi";
 import { EffectComposer, Bloom } from "@react-three/postprocessing";
 
 function Box(props) {
@@ -25,21 +27,50 @@ function Box(props) {
 
 function Ground(props) {
   return (
-    <Reflector resolution={2024} args={[8, 8]} {...props} scale={3}>
+    <Reflector
+      resolution={2024}
+      args={[8, 8]}
+      {...props}
+      scale={3}
+      depthScale={2}
+      depthToBlurRatioBias={20}
+    >
       {(Material, props) => (
-        <Material color="white" metalness={1} normalScale={[0, 0]} {...props} />
+        <Material
+          color="white"
+          metalness={1}
+          normalScale={[0, 0]}
+          {...props}
+          minDepthThreshold={0.5}
+          maxDepthThreshold={5}
+          depthScale={5}
+          depthToBlurRatioBias={0.2}
+          reflectorOffset={50}
+        />
       )}
     </Reflector>
   );
 }
 
 function Landing() {
+  const [hover, setHover] = useState(false);
+
   return (
     <section className={styles.home}>
       <div className={styles.home__title}>
         <h1 className={styles.title}>LUCAS OLIVEIRA</h1>
         <h3 className={styles.subtitle}>Web Developer from São Paulo</h3>
       </div>
+      <Link href="#about">
+        <a
+          className={styles.scrollPage}
+          onMouseEnter={() => setHover(true)}
+          onMouseLeave={() => setHover(false)}
+          style={{ backgroundColor: hover ? "white" : "rgba(0, 0, 0, 0.0)" }}
+        >
+          <FiChevronDown size={40} color={hover ? "black" : "white"} />
+        </a>
+      </Link>
       <div id={styles.canvas_container}>
         <Canvas className={styles.canvas_home}>
           <ambientLight />
