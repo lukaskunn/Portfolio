@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-
+import Link from "next/Link";
 import headerStyles from "./header.module.scss";
 
 function Header() {
@@ -34,7 +34,9 @@ function Header() {
         Lucas Oliveira
       </h1>
       <div className={headerStyles.menu}>
-        <a>About</a>
+        <Link href="#about">
+          <a>About</a>
+        </Link>
         <a>Resume</a>
         <a>Services</a>
         <a>Works</a>
