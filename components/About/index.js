@@ -7,12 +7,7 @@ function About() {
   return (
     <section className={about.about} id={"about"}>
       <Controller>
-        <Scene
-          duration={1600}
-          pin
-          triggerElement={"#about"}
-          triggerHook={"onLeave"}
-        >
+        <Scene duration={1400} pin triggerElement="#about" triggerHook="0">
           <div className={about.about__left}>
             <img
               src="https://64.media.tumblr.com/723de3a38fae9be2c3840107091e6f3d/tumblr_pg37vjbDgu1v1hotuo2_500.gifv"
@@ -30,14 +25,7 @@ function About() {
           <h2>About Me</h2>
           <h4>
             I`m a 21-year old guy, a computer science student, and working as a
-            front-end developer for e-commerce with Vtex at
-            <a
-              href="https://www.corebiz.ag/en/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Corebiz.
-            </a>
+            front-end developer for e-commerce with Vtex.
             <br /> <br /> Actually working on my Final Paper about Computer
             Vision and leaf disease for college and developing for Motorola
             India on my job.

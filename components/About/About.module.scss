@@ -3,10 +3,11 @@
 .about {
   width: 100%;
   // max-width: 1920px;
-  height: 2150px;
+  height: 2200px;
   display: flex;
   justify-content: center;
   align-items: center;
+  // padding: 0 0 0 10%;
 
   background-color: rgb(10, 10, 10);
   color: black;
@@ -17,11 +18,11 @@
     height: 90vh;
 
     img {
-      height: 110%;
+      height: 100%;
       width: 90%;
       object-fit: cover;
       -webkit-filter: grayscale(80%);
-      margin-top: 900px;
+      margin-top: 700px;
     }
   }
 
