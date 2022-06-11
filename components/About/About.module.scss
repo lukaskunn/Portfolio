@@ -1,9 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;1,400&display=swap");
 
+.container {
+  width: 100vw;
+  // height: 100vh;
+  background-color: rgb(10, 10, 10);
+  color: white;
+  z-index: 3;
+  padding-top: 10vh;
+  justify-content: center;
+}
 .about {
   width: 100%;
   // max-width: 1920px;
-  height: 2200px;
+  height: 2450px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,6 +21,8 @@
   background-color: rgb(10, 10, 10);
   color: black;
   overflow-y: hidden;
+  max-width: 1920px;
+  margin: 0 auto;
 
   &__left {
     width: 55%;
@@ -22,7 +33,7 @@
       width: 90%;
       object-fit: cover;
       -webkit-filter: grayscale(80%);
-      margin-top: 700px;
+      margin-top: 647px;
     }
   }
 
@@ -30,7 +41,7 @@
     width: 65%;
     height: 100%;
     color: white;
-    padding: 150px 80px;
+    padding: 343px 80px 150px 80px;
 
     display: flex;
     flex-direction: column;
