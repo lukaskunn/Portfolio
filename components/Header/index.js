@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Link from "next/Link";
+// import Link from "next/Link";
 import headerStyles from "./header.module.scss";
 
 function Header() {
@@ -31,13 +31,15 @@ function Header() {
         className={headerStyles.title}
         style={{ display: headerBackground == "none" ? "none" : "block" }}
       >
-        Lucas Oliveira
+        {`<Lucas Oliveira />`}
       </h1>
       <div className={headerStyles.menu}>
-        <Link href="#about">
+        <a href="#about">
           <a>About</a>
-        </Link>
-        <a>Resume</a>
+        </a>
+        <a href="#resume">
+          <a>Resume</a>
+        </a>
         <a>Services</a>
         <a>Works</a>
         <a>Contact</a>
