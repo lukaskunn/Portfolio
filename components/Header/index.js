@@ -40,7 +40,7 @@ function Header() {
         <a href="#resume">
           <a>Resume</a>
         </a>
-        <a>Services</a>
+        <a href="#services">Skills</a>
         <a>Works</a>
         <a>Contact</a>
       </div>
