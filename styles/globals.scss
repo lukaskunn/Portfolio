@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;1,400&display=swap");
+
 html,
 body {
   padding: 0;
@@ -17,4 +19,40 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+.react-tabs {
+  width: 100%;
+  font-family: "Roboto Mono", monospace;
+
+  &__tab-list {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    li {
+      width: fit-content;
+      // background-color: none;
+      background: none;
+      border-radius: 0;
+      color: white;
+
+      font-size: 1.8rem;
+    }
+
+    li + li {
+      text-align: end;
+    }
+
+    &__tab--selected {
+      background: none;
+    }
+  }
+
+  &__tab-panel,
+  &__tab-panel--selected {
+    display: flex !important;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }
