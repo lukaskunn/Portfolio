@@ -15,6 +15,7 @@ function Works() {
           selectedTabClassName={works.selcionada}
           id={works.controlledTabs}
           defaultIndex={1}
+          focusTabOnClick={false}
         >
           <TabList>
             <Tab>Personal Projects</Tab>

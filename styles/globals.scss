@@ -32,7 +32,6 @@ a {
 
     li {
       width: fit-content;
-      // background-color: none;
       background: none;
       border-radius: 0;
       color: white;
@@ -45,7 +44,8 @@ a {
     }
 
     &__tab--selected {
-      background: none;
+      background: white !important;
+      color: black !important;
     }
   }
 

@@ -1,9 +1,26 @@
-import Reac, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 
 import projectCard from "./ProjectCard.module.scss";
 
 function ProjectCard({ title, description, background }) {
   const [isClicked, setIsClicked] = useState(false);
+  const modalRef = useRef(null);
+  useOutsideAlerter(modalRef);
+
+  function useOutsideAlerter(ref) {
+    useEffect(() => {
+      function handleClickOutside(event) {
+        if (ref.current && !ref.current.contains(event.target)) {
+          setIsClicked(false);
+        }
+      }
+
+      document.addEventListener("mousedown", handleClickOutside);
+      return () => {
+        document.removeEventListener("mousedown", handleClickOutside);
+      };
+    }, [ref]);
+  }
 
   const handleIsClicked = () => {
     setIsClicked(!isClicked);
@@ -21,7 +38,7 @@ function ProjectCard({ title, description, background }) {
       </div>
       {isClicked && (
         <div className={projectCard.descModalContainer}>
-          <div className={projectCard.descModal}>
+          <div className={projectCard.descModal} ref={modalRef}>
             <img
               src={background}
               alt="project background"
