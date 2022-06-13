@@ -11,7 +11,11 @@ function Works() {
     <section className={works.container}>
       <div className={works.works} id="works">
         <h2 className={works.sectionTitle}>Works</h2>
-        <Tabs selectedTabClassName={works.selcionada} id={works.controlledTabs}>
+        <Tabs
+          selectedTabClassName={works.selcionada}
+          id={works.controlledTabs}
+          defaultIndex={1}
+        >
           <TabList>
             <Tab>Personal Projects</Tab>
             <Tab>projects I worked on</Tab>
@@ -20,19 +24,16 @@ function Works() {
             <h2>nothing to show yet!</h2>
           </TabPanel>
           <TabPanel>
-            {workList.items[1].map((project, index) => (
-              <ProjectCard
-                key={index}
-                title={project.title}
-                background={project.background}
-                description={project.description}
-              />
-            ))}
-
-            {/* <ProjectCard
-              title="Motorola India"
-              background="https://i.pinimg.com/originals/12/35/fe/1235fe31b9ff55ffcc60494a9f4ebf5b.jpg"
-            /> */}
+            <div className={works.projectGrid}>
+              {workList.items[1].map((project, index) => (
+                <ProjectCard
+                  key={index}
+                  title={project.title}
+                  background={project.background}
+                  description={project.description}
+                />
+              ))}
+            </div>
           </TabPanel>
         </Tabs>
       </div>
