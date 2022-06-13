@@ -42,7 +42,7 @@ function Header() {
         </a>
         <a href="#services">Skills</a>
         <a href="#works">Works</a>
-        <a>Contact</a>
+        <a href="#contact">Contact</a>
       </div>
     </header>
   );
