@@ -11,9 +11,8 @@
 
 .services {
   width: 100vw;
-  //   max-width: 1920px;
   margin: 0 auto;
-  padding-top: 10vh;
+  padding: 10vh 0 10vh 0;
   display: flex;
   flex-direction: column;
 
@@ -32,7 +31,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  //   margin-left: 10px;
 }
 
 .cardContainer {
@@ -42,25 +40,10 @@
 
 .cardScroll {
   position: relative;
-  //   left: -400px;
   display: flex;
   flex-direction: row;
-  //   animation-name: cardScroll;
-  animation-duration: 10s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  animation-direction: alternate-reverse;
 
   &:hover {
     animation-play-state: paused;
   }
 }
-
-// @keyframes cardScroll {
-//   from {
-//     left: -1050px;
-//   }
-//   to {
-//     left: 100vw;
-//   }
-// }
