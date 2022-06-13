@@ -8,7 +8,7 @@ function About() {
     <section className={about.container}>
       <div className={about.about} id={"about"}>
         <Controller>
-          <Scene duration={1310} pin triggerElement="#about" triggerHook="0">
+          <Scene duration={1610} pin triggerElement="#about" triggerHook="0">
             <div className={about.about__left}>
               <img
                 src="https://64.media.tumblr.com/723de3a38fae9be2c3840107091e6f3d/tumblr_pg37vjbDgu1v1hotuo2_500.gifv"
