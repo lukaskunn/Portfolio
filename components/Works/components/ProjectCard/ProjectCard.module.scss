@@ -32,6 +32,10 @@
   z-index: 4;
   backdrop-filter: blur(4px);
   transition: 0.4s all ease-in-out;
+
+  .closeModal {
+    display: none;
+  }
 }
 
 .descModal {
@@ -61,5 +65,25 @@
   .modalInformation {
     padding: 20px;
     width: 100%;
+  }
+}
+
+@media (max-width: 426px) {
+  .descModalContainer {
+    .closeModal {
+      display: block;
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 6;
+      background: none;
+      border: none;
+    }
+
+    .descModal {
+      width: 100vw;
+      height: 100vh;
+      border: none;
+    }
   }
 }

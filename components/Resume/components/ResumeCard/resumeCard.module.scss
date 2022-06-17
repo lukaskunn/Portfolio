@@ -42,3 +42,27 @@
     text-align: justify;
   }
 }
+
+@media (max-width: 426px) {
+  .resumeCard {
+    &__title {
+      font-size: 2rem !important;
+    }
+    &__mainInformation {
+      flex-direction: column;
+      h3 {
+        min-width: 0 !important;
+        width: 300px;
+      }
+      p {
+        text-align: left;
+      }
+
+      h3,
+      p {
+        height: fit-content;
+        min-height: 10px;
+      }
+    }
+  }
+}

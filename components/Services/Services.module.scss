@@ -22,6 +22,10 @@
     margin-bottom: 100px;
     margin-left: 12.5vw;
   }
+
+  .skillsMobile {
+    display: none;
+  }
 }
 
 .card {
@@ -45,5 +49,36 @@
 
   &:hover {
     animation-play-state: paused;
+  }
+}
+
+@media (max-width: 426px) {
+  .services {
+    padding: 0;
+
+    .sectionTitle {
+      margin-left: 30px;
+    }
+
+    .skillsCarousel {
+      display: none;
+    }
+
+    .skillsMobile {
+      display: block;
+      width: 100%;
+      padding: 0 30px;
+
+      h2 {
+        font-size: 2rem;
+        width: 100%;
+        border-bottom: 2px solid white;
+        line-height: 50px;
+      }
+
+      .softSkills {
+        margin-bottom: 100px;
+      }
+    }
   }
 }

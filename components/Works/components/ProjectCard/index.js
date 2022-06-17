@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
+import { MdClose } from "react-icons/md";
 
 import projectCard from "./ProjectCard.module.scss";
 
@@ -38,6 +39,9 @@ function ProjectCard({ title, description, background }) {
       </div>
       {isClicked && (
         <div className={projectCard.descModalContainer}>
+          <button className={projectCard.closeModal} onClick={handleIsClicked}>
+            <MdClose style={{ color: "white" }} size="2em" />
+          </button>
           <div className={projectCard.descModal} ref={modalRef}>
             <img
               src={background}

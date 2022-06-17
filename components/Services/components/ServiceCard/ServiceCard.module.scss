@@ -45,3 +45,25 @@
     }
   }
 }
+
+@media (max-width: 426px) {
+  .card {
+    width: 200px;
+    height: 200px;
+
+    img {
+      width: 200px;
+      height: 200px;
+    }
+
+    h2 {
+      display: block;
+      font-size: 1.4rem;
+    }
+    p {
+      display: none;
+      font-size: 1.2rem;
+      width: 100%;
+    }
+  }
+}

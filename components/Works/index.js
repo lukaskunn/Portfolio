@@ -19,7 +19,7 @@ function Works() {
         >
           <TabList>
             <Tab>Personal Projects</Tab>
-            <Tab>projects I worked on</Tab>
+            <Tab>projects i worked on</Tab>
           </TabList>
           <TabPanel>
             <h2>nothing to show yet!</h2>

@@ -2,7 +2,6 @@
 
 .container {
   width: 100vw;
-  // height: 100vh;
   background-color: black;
   color: white;
   z-index: 3;
@@ -54,7 +53,6 @@
 
   &__right {
     width: 65%;
-    // height: 2360px;
     color: white;
     padding: 150px 80px;
 
@@ -70,6 +68,27 @@
       object-fit: cover;
       -webkit-filter: grayscale(80%);
       margin-top: -68px;
+    }
+  }
+}
+
+@media (max-width: 426px) {
+  .resume {
+    height: 1910px;
+    &__left {
+      padding-left: 30px;
+      padding-right: 30px;
+      padding-top: 100px;
+      width: 100%;
+      position: absolute;
+      left: 0;
+
+      h2 {
+        margin-bottom: 200px;
+      }
+    }
+    &__right {
+      display: none;
     }
   }
 }
