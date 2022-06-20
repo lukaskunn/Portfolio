@@ -8,6 +8,8 @@ import Works from "../components/Works";
 import Contact from "../components/Contact";
 import Loading from "../components/Loading";
 
+import { LanguageProvider } from "../components/contexts/Language";
+
 export default function Home() {
   const [isLoaded, setIsLoaded] = useState(false);
 
@@ -19,19 +21,21 @@ export default function Home() {
 
   return (
     <div>
-      {isLoaded ? (
-        <>
-          <Header />
-          <Landing />
-          <About />
-          <Resume />
-          <Services />
-          <Works />
-          <Contact />
-        </>
-      ) : (
-        <Loading />
-      )}
+      <LanguageProvider>
+        {isLoaded ? (
+          <>
+            <Header />
+            <Landing />
+            <About />
+            <Resume />
+            <Services />
+            <Works />
+            <Contact />
+          </>
+        ) : (
+          <Loading />
+        )}
+      </LanguageProvider>
     </div>
   );
 }

@@ -46,11 +46,40 @@
   .menuHamburger {
     display: none;
   }
+
+  .switchLanguageDesktop {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+
+    h3 {
+      height: 30px;
+      width: 30px;
+      text-align: center;
+      padding-top: 1px;
+      color: rgba(255, 255, 255, 0.39);
+    }
+
+    h3 + h3 {
+      margin-left: 10px;
+    }
+
+    .switchLanguageSelected {
+      color: white;
+      transition: 0.2s all ease-in-out;
+    }
+  }
 }
 
 @media (max-width: 426px) {
   .header {
     padding: 0 30px;
+
+    .switchLanguageDesktop {
+      display: none;
+    }
 
     .title {
       width: 50%;
@@ -107,6 +136,33 @@
         a {
           font-size: 2rem;
         }
+      }
+    }
+    .switchLanguageDesktop {
+      display: none !important;
+    }
+    .switchLanguageMobile {
+      display: flex;
+      flex-direction: row;
+      margin-top: 100px;
+      align-items: center;
+      cursor: pointer;
+
+      h3 {
+        height: 30px;
+        width: 30px;
+        text-align: center;
+        padding-top: 1px;
+        color: rgba(255, 255, 255, 0.39);
+      }
+
+      h3 + h3 {
+        margin-left: 10px;
+      }
+
+      .switchLanguageSelected {
+        color: white;
+        transition: 0.2s all ease-in-out;
       }
     }
   }

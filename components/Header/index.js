@@ -2,10 +2,16 @@ import React, { useEffect, useState } from "react";
 // import Link from "next/Link";
 import headerStyles from "./header.module.scss";
 import { MdClose, MdMenu } from "react-icons/md";
+import { LanguageContext } from "../contexts/Language";
 
 function Header() {
   const [headerBackground, setHeaderBackground] = useState("none");
   const [menuHamburgerIsOpen, setMenuHamburgerIsOpen] = useState(false);
+  const [englishSelected, setEnglishSelected] = useState(true);
+
+  const { language, setLanguage, langEN, langPT } =
+    React.useContext(LanguageContext);
+  console.log(language.language);
 
   const listenScrollEvent = (event) => {
     if (window.scrollY < 73) {
@@ -17,6 +23,15 @@ function Header() {
 
   const handleMenuHamburger = () => {
     setMenuHamburgerIsOpen(!menuHamburgerIsOpen);
+  };
+
+  const setLanguageToEnglish = () => {
+    setLanguage(langEN);
+    setEnglishSelected(true);
+  };
+  const setLanguageToPortuguese = () => {
+    setLanguage(langPT);
+    setEnglishSelected(false);
   };
 
   useEffect(() => {
@@ -46,6 +61,23 @@ function Header() {
         <a href="#works">Works</a>
         <a href="#contact">Contact</a>
       </div>
+      <div
+        className={headerStyles.switchLanguageDesktop}
+        style={{ display: headerBackground == "none" ? "none" : "flex" }}
+      >
+        <h3
+          onClick={setLanguageToEnglish}
+          className={englishSelected ? headerStyles.switchLanguageSelected : ""}
+        >
+          EN
+        </h3>
+        <h3
+          onClick={setLanguageToPortuguese}
+          className={englishSelected ? "" : headerStyles.switchLanguageSelected}
+        >
+          PT
+        </h3>
+      </div>
       <div className={headerStyles.menuHamburger}>
         <button
           className={headerStyles.handleMenuHamburger}
@@ -71,6 +103,24 @@ function Header() {
           <a href="#services">Skills</a>
           <a href="#works">Works</a>
           <a href="#contact">Contact</a>
+          <div className={headerStyles.switchLanguageMobile}>
+            <h3
+              onClick={setLanguageToEnglish}
+              className={
+                englishSelected ? headerStyles.switchLanguageSelected : ""
+              }
+            >
+              EN
+            </h3>
+            <h3
+              onClick={setLanguageToPortuguese}
+              className={
+                englishSelected ? "" : headerStyles.switchLanguageSelected
+              }
+            >
+              PT
+            </h3>
+          </div>
         </div>
         <div
           className={`${headerStyles.menuHamburgerBackground}`}

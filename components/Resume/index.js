@@ -3,28 +3,31 @@ import React from "react";
 import { Controller, Scene } from "react-scrollmagic";
 import resume from "./Resume.module.scss";
 import ResumeCard from "./components/ResumeCard";
+import { LanguageContext } from "../contexts/Language";
 
 function Resume() {
+  const language = React.useContext(LanguageContext);
+  const resumeLang = language.language.resume;
+
   return (
     <section className={resume.container}>
       <div className={resume.resume} id="resume">
         <div className={resume.resume__left}>
-          <h2>Resume</h2>
+          <h2>{resumeLang.sectionTitle}</h2>
           <div className={resume.colletions}>
-            <ResumeCard
-              title="Front End developer React + vtex"
-              description="I work with Front-End development in Vtex Environment for E-Commerces, developing new pages for the website following a layout defined by a Designer, also developing new features, correcting problems and updating the pre-implemented functionalities. Work in agile methodology performing sprint and kanban model to align day-to-day internal tasks. I worked on the development of the Motorola USA e-commerce launch and I acted as the main developer for the Motorola India e-commerce launch"
-              startDate="Aug 2021"
-              endDate="Today"
-              company="Corebiz"
-            />
-            <ResumeCard
-              title="IT intern"
-              description="I worked with maintenance and support of IT equipments like notebooks, desktops and printers. Management of web and internal systems, control and organization of factory IT equipment. Daily management of KPIs and indicators."
-              startDate="Aug 2019"
-              endDate="Aug 2021"
-              company="Faurecia automotive do Brasil"
-            />
+            {resumeLang.cards.map((card) => {
+              return (
+                <>
+                  <ResumeCard
+                    title={card.jobTitle}
+                    description={card.description}
+                    startDate={card.startDate}
+                    endDate={card.endDate}
+                    company={card.company}
+                  />
+                </>
+              );
+            })}
           </div>
         </div>
         <Controller>

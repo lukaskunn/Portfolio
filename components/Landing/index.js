@@ -2,6 +2,7 @@
 import React, { useRef, useState } from "react";
 import styles from "./Landing.module.scss";
 
+import { LanguageContext } from "../contexts/Language";
 import Link from "next/link";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Edges, MeshReflectorMaterial, Reflector } from "@react-three/drei";
@@ -54,12 +55,18 @@ function Ground(props) {
 
 function Landing() {
   const [hover, setHover] = useState(false);
+  const language = React.useContext(LanguageContext);
+  console.log(language.language);
 
   return (
     <section className={styles.home}>
       <div className={styles.home__title}>
-        <h1 className={styles.title}>LUCAS OLIVEIRA</h1>
-        <h3 className={styles.subtitle}>Web Developer from São Paulo</h3>
+        <h1 className={styles.title}>
+          {language.language.landing.sectionTitle}
+        </h1>
+        <h3 className={styles.subtitle}>
+          {language.language.landing.subtitle}
+        </h3>
       </div>
       <Link href="#about">
         <a

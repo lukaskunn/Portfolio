@@ -2,8 +2,12 @@ import React from "react";
 import about from "./About.module.scss";
 import { Controller, Scene } from "react-scrollmagic";
 import Image from "next/image";
+import { LanguageContext } from "../contexts/Language";
 
 function About() {
+  const language = React.useContext(LanguageContext);
+  const aboutMe = language.language.aboutMe;
+
   return (
     <section className={about.container}>
       <div className={about.about} id={"about"}>
@@ -19,36 +23,18 @@ function About() {
           </Scene>
         </Controller>
         <div className={about.about__right}>
-          <h2>
-            Hello im Lucas Oliveira, Web Developer and technology enthusiast
-          </h2>
+          <h2>{aboutMe.sectionTitle}</h2>
           <section className={about.about__right__aboutMe}>
-            <h2>About Me</h2>
-            <h4>
-              I`m a 21-year old guy, a computer science student, and working as
-              a front-end developer for e-commerce with Vtex.
-              <br /> <br /> Actually working on my Final Paper about Computer
-              Vision and leaf disease for college and developing for Motorola
-              India on my job.
-              <br />
-              <br /> I`ve been worked for a lot of e-commerce creating theirs
-              home pages and product pages, creating new components and fixing
-              existing components
-              <br />
-              Actually studying React frameworks to improve my knowledge about
-              front-end. I`m
-            </h4>
+            <h2>{aboutMe.content[0].title}</h2>
+            {aboutMe.content[0].text.map((element, index) => {
+              return <h4 key={index}>{element}</h4>;
+            })}
           </section>
           <section className={about.about__right__background}>
-            <h2>Background</h2>
-            <h4>
-              Competitive programming. <br />
-              Go out with friends. <br />
-              Animes. <br />
-              Rock song. <br />
-              watch movies. <br />
-              Play Elden Ring and League of Legends.
-            </h4>
+            <h2>{aboutMe.content[1].title}</h2>
+            {aboutMe.content[1].text.map((element, index) => {
+              return <h4 key={index}>{element}</h4>;
+            })}
             <br />
           </section>
         </div>

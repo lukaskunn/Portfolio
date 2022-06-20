@@ -1,0 +1,169 @@
+{
+  "landing": {
+    "sectionTitle": "LUCAS OLIVEIRA",
+    "subtitle": "Web Developer from São Paulo"
+  },
+  "aboutMe": {
+    "sectionTitle": "Hello, im Lucas Oliveira, Web Developer and technology enthusiast",
+    "content": [
+      {
+        "title": "About Me",
+        "text": [
+          "I`m a 21-year old guy, a computer science student, and working as a front-end developer for e-commerce with Vtex.",
+          "Actually working on my Final Paper about Computer Vision and leaf disease for college and developing for Motorola India on my job.",
+          "I`ve been worked for a lot of e-commerce creating theirs home pages and product pages, creating new components and fixing existing components",
+          "Actually studying React frameworks to improve my knowledge about front-end."
+        ]
+      },
+      {
+        "title": "Background",
+        "text": [
+          "Competitive programming. ",
+          "Go out with friends. ",
+          "Animes. ",
+          "Rock song. ",
+          "watch movies. ",
+          "Play Elden Ring and League of Legends."
+        ]
+      }
+    ]
+  },
+  "resume": {
+    "sectionTitle": "Resume",
+    "cards": [
+      {
+        "jobTitle": "Front End developer React + vtex",
+        "company": "Corebiz",
+        "startDate": "Aug 2021",
+        "endDate": "Today",
+        "description": "I work with Front-End development in Vtex Environment for E-Commerces, developing new pages for the website following a layout defined by a Designer, also developing new features, correcting problems and updating the pre-implemented functionalities. Work in agile methodology performing sprint and kanban model to align day-to-day internal tasks. I worked on the development of the Motorola USA e-commerce launch and I acted as the main developer for the Motorola India e-commerce launch"
+      },
+      {
+        "jobTitle": "IT intern",
+        "company": "Faurecia automotive do Brasil",
+        "startDate": "Aug 2019",
+        "endDate": "Aug 2021",
+        "description": "I worked with maintenance and support of IT equipments like notebooks, desktops and printers. Management of web and internal systems, control and organization of factory IT equipment. Daily management of KPIs and indicators."
+      }
+    ]
+  },
+  "services": {
+    "sectionTitle": "Skills",
+    "skills": {
+      "soft": {
+        "desktop": [
+          {
+            "title": "[Vtex IO]",
+            "subtitle": "Development in vtex environment for e-commerces"
+          },
+          {
+            "title": "[Web Development]",
+            "subtitle": "Full stack development for web. Front-end and Back-end"
+          },
+          {
+            "title": "[Agile Method]",
+            "subtitle": "Work in Agile Method with sprints, retros, continuous improvement"
+          },
+          {
+            "title": "[Git / GitFlow]",
+            "subtitle": "Advanced knowledge to work with git and gitflow"
+          }
+        ],
+        "mobile": ["Vtex IO", "Web Development", "Agile Method", "Git GitFlow"]
+      },
+      "hard": {
+        "desktop": [
+          {
+            "title": "[ReactJS]",
+            "subtitle": "Advanced Knowledge about ReactJS for Front end development"
+          },
+          {
+            "title": "[Sass, Stylus, Less]",
+            "subtitle": "knowledge about pre-processors css"
+          },
+          { "title": "[Jquery]", "subtitle": "middle knowledge about jquery" },
+          {
+            "title": "[HTML / CSS]",
+            "subtitle": "Advanced knowledge about HTML and CSS for front-end development"
+          },
+          {
+            "title": "[JavaScript / Typescript]",
+            "subtitle": "Main language JavaScript and TypeScript"
+          },
+          {
+            "title": "[NodeJS]",
+            "subtitle": "Middle knowledge about work in back-end with NodeJS"
+          }
+        ],
+        "mobile": [
+          "ReactJS",
+          "SASS / Stylus / Less",
+          "Jquery",
+          "HTML / CSS",
+          "JavaScript / TypeScript",
+          "NodeJS"
+        ]
+      }
+    }
+  },
+  "works": {
+    "sectionTitle": "Works",
+    "personalProjects": {
+      "title": "Personal Projects.",
+      "projects": []
+    },
+    "backgroundProjects": {
+      "title": "projects i worked on.",
+      "projects": [
+        {
+          "projectTitle": "Motorola India",
+          "description": "My current project in my job. I work for the Motorola India team being the main developer. In this project we developing the Motorola India new E-commerce Store. I work as a dev lead in this project helping other developers and doing the most difficult tasks. I learned how to be more accessible to my team and i could improve my knowledge about React and Vtex IO. Beside this project, i was able to learn a lot of english in fact i have a meeting everyday with the Motorola India Project Manager to align the project progress",
+          "background": "https://i.imgur.com/zHoT8tu.png",
+          "urlToProject": "https://www.motorola.in",
+          "tags": []
+        },
+        {
+          "projectTitle": "Motorola US",
+          "description": "The first project i worked with Vtex IO. In this project i worked building some components for the new Product Page for the Edge 30 Pro launch. In this project i could work with an dedicated team and work with marketing team from Motorola USA. Beside work with a high level developers and improve my developing experience i could improve my english too, its was a big opportunity to me.",
+          "background": "https://i.imgur.com/EXM3era.png",
+          "urlToProject": "www.motorola.com/us/smartphones-motorola-edge-plus-gen-2/p",
+          "tags": []
+        },
+        {
+          "projectTitle": "Karsten / Trussardi",
+          "description": "Work for Karsten and Trussardi e-commerce store developing new features and fixing old. I started work with front-end in this two stores and i learned a lot about front-end and vtex. I worked with vtex legacy with HTML and CSS",
+          "background": "https://i.imgur.com/nQOAGmi.png",
+          "urlToProject": "https://www.karsten.com.br",
+          "tags": []
+        },
+        {
+          "projectTitle": "BabadoTop",
+          "description": "The hardest store front ive been worked. I worked for two months and i leaned i lot about ReactJS and advanced features. In this store i created a component that worked like an instagram storie. This component show a fitting room and an shelf to the costumer buy the products which they are seeing. I worked with vtex legacy with HTML and CSS for this store and creating some custom components with ReactJS",
+          "background": "https://i.imgur.com/EsOEylE.png",
+          "urlToProject": "https://www.babadotop.com.br",
+          "tags": []
+        }
+      ]
+    }
+  },
+  "contact": {
+    "title": "[Contact]",
+    "contacts": [
+      {
+        "type": "[email]",
+        "linkText": "lucassioliveira098@gmail.com",
+        "urlLink": "mailto:lucasisoliveira098@gmail.com?subject = Contact"
+      },
+      {
+        "type": "[LinkedIn]",
+        "linkText": "Lucas Oliveira",
+        "urlLink": "https://linkedin.com/in/lucas-oliveira-997810198/"
+      },
+      {
+        "type": "[GitHub]",
+        "linkText": "lukaskunn",
+        "urlLink": "https://github.com/lukaskunn"
+      }
+    ]
+  }
+}
