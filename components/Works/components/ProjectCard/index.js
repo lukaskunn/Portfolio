@@ -45,6 +45,7 @@ function ProjectCard({
       </div>
       {isClicked && (
         <div className={projectCard.descModalContainer}>
+          <div className={projectCard.descModalContainerBackground} />
           <button className={projectCard.closeModal} onClick={handleIsClicked}>
             <MdClose style={{ color: "white" }} size="2em" />
           </button>
@@ -57,7 +58,9 @@ function ProjectCard({
             <div className={projectCard.modalInformation}>
               <h2 className={projectCard.modalTitle}>{title}</h2>
               <p className={projectCard.modalDescription}>{description}</p>
-              <a href={urlToProject}>{texToToProject}</a>
+              <a href={urlToProject} target="_blank" rel="noreferrer">
+                {texToToProject}
+              </a>
             </div>
           </div>
         </div>

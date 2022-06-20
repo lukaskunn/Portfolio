@@ -25,16 +25,23 @@
 .descModalContainer {
   width: 100vw;
   height: 100vh;
-  position: fixed;
-  top: 50%;
-  right: 50%;
-  transform: translate(50%, -50%);
-  z-index: 4;
-  backdrop-filter: blur(4px);
-  transition: 0.4s all ease-in-out;
+  // backdrop-filter: blur(2px);
 
   .closeModal {
     display: none;
+  }
+
+  .descModalContainerBackground {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    z-index: 4;
+    transition: 0.4s all ease-in-out;
+    // background-color: rgba(0, 0, 0, 0.825);
+    backdrop-filter: blur(4px);
   }
 }
 
@@ -51,6 +58,7 @@
   border: 2px solid white;
   border-radius: 0px;
   z-index: 5;
+  // backdrop-filter: blur(0px);
 
   .modalBackground {
     width: 100%;
