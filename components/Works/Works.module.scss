@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;1,400&display=swap");
+
+.container {
+  width: 100vw;
+  height: fit-content;
+  min-height: 100vh;
+  background-color: black;
+  color: white;
+}
+
+.works {
+  width: 100%;
+  max-width: 1920px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  //   justify-content: center;
+  margin: 0 auto;
+  padding: 10vh 80px 25vh 80px;
+  margin-bottom: -20px;
+
+  .sectionTitle {
+    font-weight: 400;
+    font-size: 4rem;
+    margin-bottom: 100px;
+    font-family: "Roboto Mono", monospace;
+  }
+
+  .projectGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(auto-fill, minmax(250px, 1fr));
+  }
+}
+
+@media (max-width: 426px) {
+  .works {
+    padding: 10vh 30px 25vh 30px;
+
+    .projectGrid {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}

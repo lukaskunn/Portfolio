@@ -1,0 +1,180 @@
+{
+  "landing": {
+    "sectionTitle": "LUCAS OLIVEIRA",
+    "subtitle": "Web Developer from São Paulo"
+  },
+  "aboutMe": {
+    "headerTitle": "About",
+    "sectionTitle": "Hello, i'm Lucas Oliveira, Web Developer and technology enthusiast",
+    "content": [
+      {
+        "title": "About Me",
+        "text": [
+          "I'm a 21-year-old guy, a computer science student, and working as a front-end developer for e-commerce with Vtex.",
+          "I am currently working on my final paper about computer vision and leaf disease for college and developing for Motorola India in my job.",
+          "I've worked for a lot of e-commerce, creating their home pages and product pages, creating new components and fixing existing components.",
+          "I am currently studying React frameworks to improve my knowledge of front-end."
+        ]
+      },
+      {
+        "title": "Background",
+        "text": [
+          "Competitive programming. ",
+          "Go out with friends. ",
+          "Animes. ",
+          "watch movies. ",
+          "Rock song. ",
+          "Play video games."
+        ]
+      }
+    ]
+  },
+  "resume": {
+    "sectionTitle": "Resume",
+    "headerTitle": "Resume",
+    "cards": [
+      {
+        "jobTitle": "Front End developer React + vtex",
+        "company": "Corebiz",
+        "startDate": "Aug 2021",
+        "endDate": "Today",
+        "description": "I work with Front-End development in Vtex Environment for E-Commerces, developing new pages for the website following a layout defined by a Designer, also developing new features, correcting problems and updating the pre-implemented functionalities. Work in agile methodology performing sprint and kanban model to align day-to-day internal tasks. I worked on the development of the Motorola USA e-commerce launch and I acted as the main developer for the Motorola India e-commerce launch."
+      },
+      {
+        "jobTitle": "IT intern",
+        "company": "Faurecia automotive do Brasil",
+        "startDate": "Aug 2019",
+        "endDate": "Aug 2021",
+        "description": "I worked on maintenance and support of IT equipment like notebooks, desktops and printers. Control and organization of factory IT equipment; management of web and internal systems. Daily management of KPIs and indicators."
+      }
+    ]
+  },
+  "services": {
+    "sectionTitle": "Skills",
+    "headerTitle": "Skills",
+    "skills": {
+      "soft": {
+        "desktop": [
+          {
+            "title": "[Vtex IO]",
+            "subtitle": "Development in the vtex environment for e-commerce"
+          },
+          {
+            "title": "[Web Development]",
+            "subtitle": "Full stack development for the web. The Front-end and Back-end"
+          },
+          {
+            "title": "[Agile Method]",
+            "subtitle": "Working in an Agile Methodology with sprints, retros and continuous improvement"
+          },
+          {
+            "title": "[Git / GitFlow]",
+            "subtitle": "Advanced knowledge to work with git and gitflow"
+          }
+        ],
+        "mobile": ["Vtex IO", "Web Development", "Agile Method", "Git GitFlow"]
+      },
+      "hard": {
+        "desktop": [
+          {
+            "title": "[ReactJS]",
+            "subtitle": "Advanced Knowledge of ReactJS for Front end development"
+          },
+          {
+            "title": "[Sass, Stylus, Less]",
+            "subtitle": "knowledge about pre-processors css"
+          },
+          { "title": "[Jquery]", "subtitle": "jquery intermediate knowledge" },
+          {
+            "title": "[HTML / CSS]",
+            "subtitle": "Advanced knowledge of HTML and CSS for front-end development"
+          },
+          {
+            "title": "[JavaScript / Typescript]",
+            "subtitle": "Advanced knowledge of JavaScript and TypeScript"
+          },
+          {
+            "title": "[NodeJS]",
+            "subtitle": "Middle knowledge about working in the back-end with NodeJS"
+          },
+          {
+            "title": "[Angular]",
+            "subtitle": "Knowledge of development with Angular 8"
+          }
+        ],
+        "mobile": [
+          "ReactJS",
+          "SASS / Stylus / Less",
+          "Jquery",
+          "HTML / CSS",
+          "JavaScript / TypeScript",
+          "NodeJS",
+          "Angular"
+        ]
+      }
+    }
+  },
+  "works": {
+    "sectionTitle": "Works",
+    "headerTitle": "Works",
+    "seeMoreText": "see project",
+    "personalProjects": {
+      "title": "Personal Projects.",
+      "projects": []
+    },
+    "backgroundProjects": {
+      "title": "projects i worked on.",
+      "projects": [
+        {
+          "projectTitle": "Motorola India",
+          "description": "My current project in my job. I work for the Motorola India team being the main developer. In this project we developing the Motorola India new E-commerce Store. I work as a dev lead in this project helping other developers and doing the most difficult tasks. I learned how to be more accessible to my team and i could improve my knowledge about React and Vtex IO. Beside this project, i was able to learn a lot of english in fact i have a meeting everyday with the Motorola India Project Manager to align the project progress",
+          "background": "https://i.imgur.com/zHoT8tu.png",
+          "urlToProject": "https://www.motorola.in",
+          "tags": []
+        },
+        {
+          "projectTitle": "Motorola US",
+          "description": "My current project at my job. I work for the Motorola India team, being the main developer. We are creating the Motorola India new E-commerce Store for this project. I work as a developer lead on this project, helping other developers, doing code reviews, and doing the most difficult tasks. I learned how to be more accessible to my team and i could improve my knowledge of React and Vtex IO. Besides this project, i was able to learn a lot of English. In fact, i have a meeting every day with the Motorola India Project Manager to align the project's progress.",
+          "background": "https://i.imgur.com/EXM3era.png",
+          "urlToProject": "www.motorola.com/us/smartphones-motorola-edge-plus-gen-2/p",
+          "tags": []
+        },
+        {
+          "projectTitle": "Karsten / Trussardi",
+          "description": "I worked for Karsten and Trussardi e-commerce stores, developing new features and fixing old ones. I started to work with front-end in these two stores, and i learned a lot about the front-end and vtex. I worked with vtex legacy with HTML and CSS",
+          "background": "https://i.imgur.com/nQOAGmi.png",
+          "urlToProject": "https://www.karsten.com.br",
+          "tags": []
+        },
+        {
+          "projectTitle": "BabadoTop",
+          "description": "The hardest storefront I've ever worked at. I worked for two months and I learned a lot about ReactJS and advanced features. In this store, i created a component that worked like an Instagram story. This component shows a fitting room and a shelf for the customer to buy the products that they are seeing. I worked with vtex legacy with HTML and CSS for this store, and creating some custom components with ReactJS",
+          "background": "https://i.imgur.com/EsOEylE.png",
+          "urlToProject": "https://www.babadotop.com.br",
+          "tags": []
+        }
+      ]
+    }
+  },
+  "contact": {
+    "title": "[Contact]",
+    "headerTitle": "Contact",
+    "contacts": [
+      {
+        "type": "[Email]",
+        "linkText": "lucassioliveira098@gmail.com",
+        "urlLink": "mailto:lucasisoliveira098@gmail.com?subject = Contact"
+      },
+      {
+        "type": "[LinkedIn]",
+        "linkText": "Lucas Oliveira",
+        "urlLink": "https://linkedin.com/in/lucas-oliveira-997810198/"
+      },
+      {
+        "type": "[GitHub]",
+        "linkText": "lukaskunn",
+        "urlLink": "https://github.com/lukaskunn"
+      }
+    ]
+  }
+}
