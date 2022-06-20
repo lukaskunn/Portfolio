@@ -34,6 +34,11 @@
     .title {
       letter-spacing: 15px;
       font-size: 65px;
+      padding-top: 20px;
+      animation: showText 0.8s normal;
+      animation-fill-mode: forwards;
+      animation-delay: 1.2s;
+      opacity: 0;
     }
 
     .subtitle {
@@ -41,6 +46,11 @@
       word-spacing: 25px;
       letter-spacing: 7px;
       font-size: 25px;
+      padding-top: 20px;
+      animation: showText 0.8s normal;
+      animation-fill-mode: forwards;
+      animation-delay: 1.5s;
+      opacity: 0;
     }
   }
 
@@ -53,6 +63,11 @@
     border: none;
     border-radius: 50%;
     color: white;
+    padding-top: 20px;
+    animation: showText 0.8s normal;
+    animation-fill-mode: forwards;
+    animation-delay: 2s;
+    opacity: 0;
 
     transition: 0.2s all ease-in;
 
@@ -106,5 +121,16 @@
     .scrollPage {
       bottom: 50px;
     }
+  }
+}
+
+@keyframes showText {
+  from {
+    padding-top: 20px;
+    opacity: 0;
+  }
+  to {
+    padding-top: 0px;
+    opacity: 1;
   }
 }

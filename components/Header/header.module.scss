@@ -32,6 +32,11 @@
     justify-content: center;
     font-weight: 100;
     font-size: 20px;
+    padding-top: 20px;
+    animation: showText 0.8s normal;
+    animation-fill-mode: forwards;
+    animation-delay: 1.8s;
+    opacity: 0;
 
     a {
       white-space: normal;
@@ -168,5 +173,16 @@
         transition: 0.2s all ease-in-out;
       }
     }
+  }
+}
+
+@keyframes showText {
+  from {
+    padding-top: 20px;
+    opacity: 0;
+  }
+  to {
+    padding-top: 0px;
+    opacity: 1;
   }
 }
