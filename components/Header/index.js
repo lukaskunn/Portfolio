@@ -11,7 +11,7 @@ function Header() {
 
   const { language, setLanguage, langEN, langPT } =
     React.useContext(LanguageContext);
-  console.log(language.language);
+  console.log(language);
 
   const listenScrollEvent = (event) => {
     if (window.scrollY < 73) {
@@ -35,6 +35,10 @@ function Header() {
   };
 
   useEffect(() => {
+    setLanguage(langEN);
+  }, []);
+
+  useEffect(() => {
     window.addEventListener("scroll", listenScrollEvent);
 
     return () => window.removeEventListener("scroll", listenScrollEvent);
@@ -50,20 +54,20 @@ function Header() {
     >
       <h1
         className={headerStyles.title}
-        style={{ display: headerBackground == "none" ? "none" : "block" }}
+        style={{ opacity: headerBackground == "none" ? "0" : "1" }}
       >
         {`<Lucas Oliveira />`}
       </h1>
       <div className={headerStyles.menu}>
-        <a href="#about">About</a>
-        <a href="#resume">Resume</a>
-        <a href="#services">Skills</a>
-        <a href="#works">Works</a>
-        <a href="#contact">Contact</a>
+        <a href="#about">{language.aboutMe.headerTitle}</a>
+        <a href="#resume">{language.resume.headerTitle}</a>
+        <a href="#services">{language.services.headerTitle}</a>
+        <a href="#works">{language.works.headerTitle}</a>
+        <a href="#contact">{language.contact.headerTitle}</a>
       </div>
       <div
         className={headerStyles.switchLanguageDesktop}
-        style={{ display: headerBackground == "none" ? "none" : "flex" }}
+        style={{ opacity: headerBackground == "none" ? "0" : "1" }}
       >
         <h3
           onClick={setLanguageToEnglish}

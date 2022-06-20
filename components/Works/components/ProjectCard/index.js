@@ -3,7 +3,13 @@ import { MdClose } from "react-icons/md";
 
 import projectCard from "./ProjectCard.module.scss";
 
-function ProjectCard({ title, description, background }) {
+function ProjectCard({
+  title,
+  description,
+  background,
+  urlToProject,
+  texToToProject,
+}) {
   const [isClicked, setIsClicked] = useState(false);
   const modalRef = useRef(null);
   useOutsideAlerter(modalRef);
@@ -51,6 +57,7 @@ function ProjectCard({ title, description, background }) {
             <div className={projectCard.modalInformation}>
               <h2 className={projectCard.modalTitle}>{title}</h2>
               <p className={projectCard.modalDescription}>{description}</p>
+              <a href={urlToProject}>{texToToProject}</a>
             </div>
           </div>
         </div>

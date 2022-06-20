@@ -4,6 +4,7 @@
     "subtitle": "Web Developer from São Paulo"
   },
   "aboutMe": {
+    "headerTitle": "About",
     "sectionTitle": "Hello, im Lucas Oliveira, Web Developer and technology enthusiast",
     "content": [
       {
@@ -30,6 +31,7 @@
   },
   "resume": {
     "sectionTitle": "Resume",
+    "headerTitle": "Resume",
     "cards": [
       {
         "jobTitle": "Front End developer React + vtex",
@@ -49,6 +51,7 @@
   },
   "services": {
     "sectionTitle": "Skills",
+    "headerTitle": "Skills",
     "skills": {
       "soft": {
         "desktop": [
@@ -108,6 +111,8 @@
   },
   "works": {
     "sectionTitle": "Works",
+    "headerTitle": "Works",
+    "seeMoreText": "see project",
     "personalProjects": {
       "title": "Personal Projects.",
       "projects": []
@@ -148,6 +153,7 @@
   },
   "contact": {
     "title": "[Contact]",
+    "headerTitle": "Contact",
     "contacts": [
       {
         "type": "[email]",

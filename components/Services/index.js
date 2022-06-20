@@ -22,7 +22,7 @@ function Services() {
                     <>
                       <ServiceCard
                         title={skill.title}
-                        description={skill.description}
+                        description={skill.subtitle}
                       />
                     </>
                   );
@@ -43,7 +43,7 @@ function Services() {
                     <>
                       <ServiceCard
                         title={skill.title}
-                        description={skill.description}
+                        description={skill.subtitle}
                       />
                     </>
                   );

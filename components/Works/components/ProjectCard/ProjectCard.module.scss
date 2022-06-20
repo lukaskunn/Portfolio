@@ -40,7 +40,7 @@
 
 .descModal {
   width: 1000px;
-  height: 800px;
+  height: 600px;
   background-color: black;
   position: fixed;
   top: 50%;
@@ -57,14 +57,24 @@
     height: 200px;
     object-fit: cover;
     border: none;
-    -webkit-filter: brightness(0.3) grayscale(80%);
-    // border-top-right-radius: 6px;
-    // border-top-right-radius: 6px;
+    -webkit-filter: brightness(0.75) grayscale(80%);
   }
 
   .modalInformation {
-    padding: 20px;
+    padding: 30px;
     width: 100%;
+
+    h2 {
+      font-size: 2rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+    }
+
+    a {
+      font-size: 1.2rem;
+    }
   }
 }
 
@@ -84,6 +94,10 @@
       width: 100vw;
       height: 100vh;
       border: none;
+    }
+
+    .modalInformation {
+      overflow: scroll;
     }
   }
 }

@@ -4,6 +4,7 @@
     "subtitle": "Desenvolvedor Web em São Paulo"
   },
   "aboutMe": {
+    "headerTitle": "Sobre",
     "sectionTitle": "Ola, eu sou Lucas Oliveira, desenvolvedor web e entusiasta da tecnologia",
     "content": [
       {
@@ -12,8 +13,7 @@
           "Sou um cara de 21 anos, estudante de ciencia da computação e trabalhando como desenvolvedor front-end para e-commerces com Vtex.",
           "Atualmente trabalhando no meu projeto de conclusão de curso, sobre Visão Computacional e identificação de doenças em plantas de tomate, e desenvolvendo para Motorola India no meu trabalho.",
           "Trabalhei desenvolvendo para diversos e-commerces creando suas home pages e suas paginas de produto, criando novos componentes e ajustando componentes já implementados.",
-          "Atualmente estudando JavaScript e seus framworks para melhorar meu conhecimento como desenvolvedor front-end.",
-          "I`m a 21-year old guy, a computer science student, and working as a front-end developer for e-commerce with Vtex"
+          "Atualmente estudando JavaScript e seus framworks para melhorar meu conhecimento como desenvolvedor front-end."
         ]
       },
       {
@@ -31,6 +31,7 @@
   },
   "resume": {
     "sectionTitle": "Resumo",
+    "headerTitle": "Resumo",
     "cards": [
       {
         "jobTitle": "Desenvolvedor Front-End React + vtex",
@@ -50,6 +51,7 @@
   },
   "services": {
     "sectionTitle": "Habilidades",
+    "headerTitle": "Habilidades",
     "skills": {
       "soft": {
         "desktop": [
@@ -81,7 +83,7 @@
         "desktop": [
           {
             "title": "[ReactJS]",
-            "subtitle": "Advanced Knowledge about ReactJS for Front end development Conhecimento avançado em desenvolvimento front end com ReactJS"
+            "subtitle": "Conhecimento avançado em desenvolvimento front end com ReactJS"
           },
           {
             "title": "[Sass, Stylus, Less]",
@@ -122,6 +124,8 @@
   },
   "works": {
     "sectionTitle": "Trabalhos",
+    "headerTitle": "Trabalhos",
+    "seeMoreText": "ver projeto",
     "personalProjects": {
       "title": "Projetos pessoais.",
       "projects": []
@@ -162,6 +166,7 @@
   },
   "contact": {
     "title": "[Contato]",
+    "headerTitle": "Contato",
     "contacts": [
       {
         "type": "[email]",

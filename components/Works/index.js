@@ -39,6 +39,7 @@ function Works() {
                       background={project.background}
                       description={project.description}
                       urlToProject={project.urlToProject}
+                      texToToProject={worksLang.seeMoreText}
                     />
                   </>
                 );
@@ -60,6 +61,7 @@ function Works() {
                         background={project.background}
                         description={project.description}
                         urlToProject={project.urlToProject}
+                        texToToProject={worksLang.seeMoreText}
                       />
                     </>
                   );
