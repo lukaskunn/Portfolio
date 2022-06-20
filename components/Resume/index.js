@@ -32,7 +32,7 @@ function Resume() {
         </div>
         <Controller>
           <Scene
-            duration={1650}
+            duration={1550}
             pin
             triggerElement={"#resume"}
             triggerHook={"onLeave"}

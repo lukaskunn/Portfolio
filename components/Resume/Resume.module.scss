@@ -16,7 +16,7 @@
   z-index: 3;
   padding-top: 10vh;
 
-  height: 2390px;
+  height: 2250px;
   display: flex;
   justify-content: center;
   overflow-y: hidden;
@@ -75,7 +75,7 @@
 @media (max-width: 426px) {
   .resume {
     height: 1910px;
-    padding: 50vh 0 10vh 0;
+    padding: 0 0 10vh 0;
     &__left {
       padding-left: 30px;
       padding-right: 30px;
