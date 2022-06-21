@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Head from "next/head";
 import Header from "../components/Header";
 import Landing from "../components/Landing";
 import About from "../components/About";
@@ -21,6 +22,9 @@ export default function Home() {
 
   return (
     <div>
+      <Head>
+        <title>Lucas Oliveira - portfolio</title>
+      </Head>
       <LanguageProvider>
         {isLoaded ? (
           <>
