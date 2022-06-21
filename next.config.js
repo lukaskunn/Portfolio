@@ -12,7 +12,7 @@ module.exports = withTM();
 module.exports = nextConfig;
 module.exports = {
   i18n: {
-    locales: ["pt"],
-    defaultLocale: "pt",
+    locales: ["en", "pt-BR"],
+    defaultLocale: "en",
   },
 };

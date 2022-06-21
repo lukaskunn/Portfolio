@@ -4,7 +4,6 @@ export default function Document() {
   return (
     <Html translate="no">
       <Head>
-        <title>Lucas Oliveira - portfolio</title>
         <link
           rel="apple-touch-icon"
           sizes="180x180"
