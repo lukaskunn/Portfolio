@@ -10,6 +10,7 @@ import Contact from "../components/Contact";
 import Loading from "../components/Loading";
 
 import { LanguageProvider } from "../components/contexts/Language";
+import CursorFollower from "../components/CursorFollower";
 
 export default function Home() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -26,6 +27,7 @@ export default function Home() {
         <title>Lucas Oliveira - portfolio</title>
       </Head>
       <LanguageProvider>
+        <CursorFollower isLoaded={isLoaded} />
         {isLoaded ? (
           <>
             <Header />
