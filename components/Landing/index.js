@@ -56,7 +56,6 @@ function Ground(props) {
 function Landing() {
   const [hover, setHover] = useState(false);
   const language = React.useContext(LanguageContext);
-  console.log(language.language);
 
   return (
     <section className={styles.home}>

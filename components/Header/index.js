@@ -11,7 +11,6 @@ function Header() {
 
   const { language, setLanguage, langEN, langPT } =
     React.useContext(LanguageContext);
-  console.log(language);
 
   const listenScrollEvent = (event) => {
     if (window.scrollY < 73) {
