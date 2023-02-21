@@ -7,11 +7,29 @@ const useMousePosition = () => {
   React.useEffect(() => {
     const updateMousePosition = (ev) => {
       setTimeout(() => {
+        const y = ev.pageY;
+        const x = ev.pageX;
+        const scrollLeft =
+          window.pageXOffset !== undefined
+            ? window.pageXOffset
+            : (
+                document.documentElement ||
+                document.body.parentNode ||
+                document.body
+              ).scrollLeft;
+        const scrollTop =
+          window.pageYOffset !== undefined
+            ? window.pageYOffset
+            : (
+                document.documentElement ||
+                document.body.parentNode ||
+                document.body
+              ).scrollTop;
         setMousePosition({
-          x: ev.clientX + window.scrollX,
-          y: ev.clientY + window.scrollY,
+          x: x - scrollLeft,
+          y: y - scrollTop,
         });
-      }, 150);
+      }, 20);
     };
     window.addEventListener("mousemove", updateMousePosition);
     return () => {
