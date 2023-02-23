@@ -9,6 +9,7 @@ import { Edges, MeshReflectorMaterial, Reflector } from "@react-three/drei";
 import { FiChevronDown } from "react-icons/fi";
 import { EffectComposer, Bloom } from "@react-three/postprocessing";
 import LateralScrolling from "./components/LateralScrolling"
+import ImageBackground from "./components/ImageBackground";
 
 function Landing() {
   const [hover, setHover] = useState(false);
@@ -43,6 +44,7 @@ function Landing() {
       <div className={styles['noise-filter']}></div>
       <div className={styles['white-border']}><div className={styles['internal-white-border1']}><div className={styles['internal-white-border2']}></div></div></div>
       <LateralScrolling />
+      <ImageBackground />
       <Link href="#about">
         <a
           className={styles.scrollPage}
