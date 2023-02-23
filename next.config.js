@@ -16,7 +16,3 @@ module.exports = {
     defaultLocale: "en",
   },
 };
-
-module.exports = {
-  distDir: 'build',
-}
