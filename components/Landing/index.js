@@ -21,8 +21,7 @@ function Landing() {
   }, [subtitleIndex]);
 
   const changeSubtitle = () => {
-    const texts = ['web developer', 'ウェブ開発者', 'tech enthusiast', '残虐行為', 'loren ipsum']
-    setSubtitle(texts[subtitleIndex % texts.length]);
+    setSubtitle(language.language.landing.subtitle[subtitleIndex % language.language.landing.subtitle.length]);
 
     setTimeout(() => {
       setSubtitleIndex(subtitleIndex + 1);

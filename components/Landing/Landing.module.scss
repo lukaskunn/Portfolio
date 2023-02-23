@@ -59,6 +59,7 @@
     justify-content: center;
     align-items: center;
     user-select: none;
+    mix-blend-mode: color-dodge;
 
     .title {
       letter-spacing: 15px;
@@ -78,12 +79,12 @@
 
     .title:hover {
       color: white;
-      background: black;
+      background: none;
     }
 
     .subtitle {
       position: absolute;
-      left: 0;
+      left: 40px;
       bottom: -5px;
       word-spacing: 25px;
       letter-spacing: 7px;
