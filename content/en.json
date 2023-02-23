@@ -1,7 +1,13 @@
 {
   "landing": {
-    "sectionTitle": "LUCAS OLIVEIRA",
-    "subtitle": "Web Developer from São Paulo"
+    "sectionTitle": "Lucas Oliveira",
+    "subtitle": [
+      "web developer",
+      "ウェブ開発者",
+      "tech enthusiast",
+      "残虐行為",
+      "loren ipsum"
+    ]
   },
   "aboutMe": {
     "headerTitle": "About",
