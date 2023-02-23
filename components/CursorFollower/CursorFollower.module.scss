@@ -12,6 +12,11 @@
     animation: fadeInCursor 0.5s normal;
 }
 
+@media only screen and (max-width: 768px) {
+    .white-circle {
+        display: none;
+    }
+}
 @keyframes fadeInCursor {
     from {
         opacity: 0;
