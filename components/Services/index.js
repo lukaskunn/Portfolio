@@ -17,14 +17,13 @@ function Services() {
           <Marquee pauseOnHover={true} speed={50} gradient={false}>
             {[...Array(n)].map((e, i) => (
               <div className={services.cardContainer} key={i}>
-                {servicesLang.skills.soft.desktop.map((skill) => {
+                {servicesLang.skills.soft.desktop.map((skill, index) => {
                   return (
-                    <>
-                      <ServiceCard
-                        title={skill.title}
-                        description={skill.subtitle}
-                      />
-                    </>
+                    <ServiceCard
+                      key={index}
+                      title={skill.title}
+                      description={skill.subtitle}
+                    />
                   );
                 })}
               </div>
@@ -38,14 +37,13 @@ function Services() {
           >
             {[...Array(n)].map((e, i) => (
               <div className={services.cardContainer} key={i}>
-                {servicesLang.skills.hard.desktop.map((skill) => {
+                {servicesLang.skills.hard.desktop.map((skill, index) => {
                   return (
-                    <>
-                      <ServiceCard
-                        title={skill.title}
-                        description={skill.subtitle}
-                      />
-                    </>
+                    <ServiceCard
+                      key={index}
+                      title={skill.title}
+                      description={skill.subtitle}
+                    />
                   );
                 })}
               </div>
@@ -55,21 +53,17 @@ function Services() {
         <div className={services.skillsMobile}>
           <div className={services.softSkills}>
             <h2>Soft</h2>
-            {servicesLang.skills.soft.mobile.map((skill) => {
+            {servicesLang.skills.soft.mobile.map((skill, index) => {
               return (
-                <>
-                  <p>{skill}</p>
-                </>
+                <p key={index}>{skill}</p>
               );
             })}
           </div>
           <div className={services.hardSkills}>
             <h2>Hard</h2>
-            {servicesLang.skills.hard.mobile.map((skill) => {
+            {servicesLang.skills.hard.mobile.map((skill, index) => {
               return (
-                <>
-                  <p>{skill}</p>
-                </>
+                <p key={index}>{skill}</p>
               );
             })}
           </div>

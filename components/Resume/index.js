@@ -15,17 +15,16 @@ function Resume() {
         <div className={resume.resume__left}>
           <h2>{resumeLang.sectionTitle}</h2>
           <div className={resume.colletions}>
-            {resumeLang.cards.map((card) => {
+            {resumeLang.cards.map((card, index) => {
               return (
-                <>
                   <ResumeCard
+                    key={index}
                     title={card.jobTitle}
                     description={card.description}
                     startDate={card.startDate}
                     endDate={card.endDate}
                     company={card.company}
                   />
-                </>
               );
             })}
           </div>

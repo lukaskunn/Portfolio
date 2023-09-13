@@ -32,7 +32,6 @@ function Works() {
             ) : (
               worksLang.personalProjects.projects.map((project, index) => {
                 return (
-                  <>
                     <ProjectCard
                       key={index}
                       title={project.projectTitle}
@@ -41,7 +40,6 @@ function Works() {
                       urlToProject={project.urlToProject}
                       texToToProject={worksLang.seeMoreText}
                     />
-                  </>
                 );
               })
             )}
@@ -54,7 +52,6 @@ function Works() {
               ) : (
                 worksLang.backgroundProjects.projects.map((project, index) => {
                   return (
-                    <>
                       <ProjectCard
                         key={index}
                         title={project.projectTitle}
@@ -63,7 +60,6 @@ function Works() {
                         urlToProject={project.urlToProject}
                         texToToProject={worksLang.seeMoreText}
                       />
-                    </>
                   );
                 })
               )}
