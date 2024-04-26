@@ -54,7 +54,7 @@ const backgroundImageStyles = {
 
   return (
     <div className={styles["img-bg-container"]} style={backgroundImageStyles}>
-      {images.map((image, index) => {
+      {images.map((image: any, index: any) => {
         return (
           <img
             alt={`image_${index + 1}`}
