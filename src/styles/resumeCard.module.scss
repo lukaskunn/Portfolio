@@ -43,19 +43,30 @@
   }
 }
 
-@media (max-width: 426px) {
+@media (max-width: 768px) {
   .resumeCard {
-    &__title {
-      font-size: 2rem !important;
+    margin: 0 0 60px;
+
+    &:last-child {
+      margin-bottom: 0;
     }
+
+    h2 {
+      font-size: 42px;
+    }
+
     &__mainInformation {
       flex-direction: column;
+      // gap: 5px;
+      margin: 10px 0 20px;
       h3 {
         min-width: 0 !important;
+        font-size: 32px;
         width: 300px;
       }
       p {
         text-align: left;
+        font-size: 24px;
       }
 
       h3,

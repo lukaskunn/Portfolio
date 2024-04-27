@@ -5,6 +5,7 @@ import SVG from "../../components/SVGBackground";
 import { useRouter } from "next/router";
 import { motion } from "framer-motion";
 import { PageContext } from "../../contexts/PageContext";
+import useIsMobile from "../../hooks/isMobile";
 interface ICurve {
   children: React.ReactNode;
 }
@@ -15,6 +16,7 @@ const Curve = (props: ICurve) => {
   const {transitionsText} = language;
   const {routesTexts} = transitionsText;
   const router = useRouter();
+  const isMobile = useIsMobile();
   const [dimensions, setDimensions] = React.useState({
     height: 0,
     width: 0,
@@ -70,7 +72,7 @@ const Curve = (props: ICurve) => {
       <motion.p {...getAnimationProps(text)} className={styles["route-name"]}>
         {routesTexts[router.route]}
       </motion.p>
-      {dimensions.width > 0 && <SVG {...dimensions} />}
+      {dimensions.width > 0 && <SVG {...dimensions} isMobile={isMobile}/>}
       {children}
     </div>
   );

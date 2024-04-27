@@ -4,18 +4,18 @@ import headerStyles from "../../styles/header.module.scss";
 import { MdClose, MdMenu } from "react-icons/md";
 import { PageContext } from "../../contexts/PageContext";
 import Link from "next/link";
-
+import { useRouter } from "next/router";
 function Header() {
   const [headerBackground, setHeaderBackground] = useState("none");
   const [menuHamburgerIsOpen, setMenuHamburgerIsOpen] = useState(false);
   const [englishSelected, setEnglishSelected] = useState(true);
-
+  const router = useRouter();
   const { language, setLanguage, langEN, langPT } = React.useContext(
     PageContext
   ) as any;
 
-  const {header} = language;
-  const {headerTitle, menuItems} = header;
+  const { header } = language;
+  const { headerTitle, menuItems } = header;
 
   const listenScrollEvent = () => {
     if (window.scrollY < 200) {
@@ -57,15 +57,25 @@ function Header() {
         justifyContent: "space-between",
       }}
     >
-      <Link href="/" className={headerStyles.title} style={{ opacity: "1" }} scroll={false}>
+      <Link
+        href="/"
+        className={`${headerStyles.title} ${headerStyles["title-desktop"]}`}
+        style={{ opacity: "1" }}
+        scroll={false}
+      >
         {headerTitle}
       </Link>
+      <div className={headerStyles["spacing"]} />
 
       <div className={headerStyles.menu}>
         {menuItems.map((item: any, index: any) => {
           const { text, href } = item;
           return (
-            <Link href={href} key={`${text}_${index}`} className={headerStyles.menuItem}>
+            <Link
+              href={href}
+              key={`${text}_${index}`}
+              className={headerStyles.menuItem}
+            >
               {text}
             </Link>
           );
@@ -103,16 +113,31 @@ function Header() {
         <div
           className={`${headerStyles.menuHamburgerMenu}`}
           style={{
-            left: menuHamburgerIsOpen ? "50px" : "100vw",
-            transitionDelay: menuHamburgerIsOpen ? "0.3s" : "0s",
+            left: menuHamburgerIsOpen ? "50px" : "115vw",
+            transitionDelay: menuHamburgerIsOpen ? "0.2s" : "0s",
           }}
           onClick={handleMenuHamburger}
         >
-          <a href="#about">About</a>
-          <a href="#resume">Resume</a>
-          <a href="#services">Skills</a>
-          <a href="#works">Works</a>
-          <a href="#contact">Contact</a>
+          <Link
+            href="/"
+            className={`${headerStyles.title} ${headerStyles["title-mobile"]}`}
+            style={{ opacity: "1" }}
+            scroll={false}
+          >
+            {headerTitle}
+          </Link>
+          {menuItems.map((item: any, index: any) => {
+            const { text, href } = item;
+            return (
+              <Link
+                href={href}
+                key={`${text}_${index}`}
+                className={headerStyles.menuItem}
+              >
+                {text}
+              </Link>
+            );
+          })}
           <div className={headerStyles.switchLanguageMobile}>
             <h3
               onClick={setLanguageToEnglish}
@@ -135,8 +160,8 @@ function Header() {
         <div
           className={`${headerStyles.menuHamburgerBackground}`}
           style={{
-            left: menuHamburgerIsOpen ? "0" : "100vw",
-            transitionDelay: menuHamburgerIsOpen ? "0s" : "0.3s",
+            left: menuHamburgerIsOpen ? "0" : "115vw",
+            transitionDelay: menuHamburgerIsOpen ? "0s" : "0.2s",
           }}
         />
       </div>

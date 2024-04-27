@@ -12,8 +12,8 @@ function CursorFollower() {
       <div
         className={cursorFollowerStyles["white-circle"]}
         style={{
-          top: mousePosition.y - 25,
-          left: mousePosition.x - 25,
+          top: mousePosition?.y - 25,
+          left: mousePosition?.x - 25,
         }}
       />
     )

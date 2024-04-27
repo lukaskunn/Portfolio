@@ -34,9 +34,17 @@
   }
 }
 
-@media (max-width: 426px) {
+@media (max-width: 768px) {
+  .container {
+    padding: 20px 20px 120px;
+  }
   .works {
-    padding: 10vh 30px 25vh 30px;
+    padding: 0;
+
+    .sectionTitle {
+      font-size: 24px;
+      margin-bottom: 40px;
+    }
 
     .projectGrid {
       display: flex;

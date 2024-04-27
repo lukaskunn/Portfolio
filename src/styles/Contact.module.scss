@@ -39,12 +39,19 @@
   }
 }
 
-@media (max-width: 426px) {
+@media (max-width: 768px) {
   .contact {
     width: 100%;
     max-width: 426px;
     height: 100%;
     padding: 10vh 30px;
+    flex-direction: column-reverse;
+    justify-content: center;
+
+    .contactSide {
+      width: 100%;
+      margin-top: 40px;
+    }
 
     h2 {
       font-size: 2.5rem;
@@ -60,8 +67,8 @@
       }
     }
 
-    img {
-      display: none;
-    }
+    // img {
+    //   display: none;
+    // }
   }
 }

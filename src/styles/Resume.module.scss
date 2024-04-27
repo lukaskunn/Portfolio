@@ -26,7 +26,7 @@
     padding-left: 100px;
     padding-top: 222px;
 
-    h2 {
+    h2.section-title {
       font-weight: 400;
       font-size: 4rem;
       margin-bottom: 254px;
@@ -37,16 +37,16 @@
       font-size: 1.2rem;
     }
 
-    &__aboutMe,
-    &__background {
-      margin-bottom: 200px;
-      width: 100%;
-      h2 {
-        font-size: 2.5rem;
-        margin-bottom: 50px;
-        border-bottom: 2px solid white;
-      }
-    }
+    // &__aboutMe,
+    // &__background {
+    //   margin-bottom: 200px;
+    //   width: 100%;
+    //   h2 {
+    //     font-size: 2.5rem;
+    //     margin-bottom: 50px;
+    //     border-bottom: 2px solid white;
+    //   }
+    // }
   }
 
   &__right {
@@ -73,20 +73,18 @@
   }
 }
 
-@media (max-width: 426px) {
+@media (max-width: 768px) {
+  .container {
+    padding: 30px 30px 60px;
+  }
   .resume {
-    height: 1910px;
-    padding: 0 0 10vh 0;
+    padding: 0;
     &__left {
-      padding-left: 30px;
-      padding-right: 30px;
-      padding-top: 100px;
       width: 100%;
-      position: absolute;
-      left: 0;
+      padding: 0;
 
-      h2 {
-        margin-bottom: 200px;
+      h2.section-title {
+        margin-bottom: 40px;
       }
     }
     &__right {

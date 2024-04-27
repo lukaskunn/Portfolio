@@ -7,7 +7,7 @@
         top: 40%;
         left: 50%;
         transform: translateX(-50%);
-        color: white;
+        color: #0c0c0c;
         font-size: 46px;
         z-index: 999;
     }
@@ -19,13 +19,10 @@
         position: fixed;
         pointer-events: none;
         z-index: 998;
+        // transform: scale(0.5);
     }
 
     .transition-svg {
-        fill: #0c0c0c;
-    }
-
-    .transition-svg2 {
-        fill: #d1d1d1
+        fill: rgb(212 212 216);
     }
 }

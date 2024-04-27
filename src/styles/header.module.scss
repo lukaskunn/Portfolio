@@ -29,6 +29,18 @@
     // transition: .2s all cubic-bezier(0, 0, 0, 1);
   }
 
+  .title-desktop {
+    display: block;
+  }
+
+  .title-mobile {
+    display: none;
+  }
+
+  .spacing {
+    display: none;
+  }
+
   .menu {
     display: flex;
     flex-direction: row;
@@ -96,12 +108,13 @@
   height: 4px;
 }
 
-@media (max-width: 426px) {
+@media (max-width: 768px) {
   .header-bottom-border {
     display: none;
   }
   .header {
     padding: 0 30px;
+    width: 100%;
     grid-template-columns: repeat(2, minmax(20%, 1fr));
 
     .title {
@@ -109,18 +122,31 @@
       font-size: 1rem;
     }
 
+    .spacing {
+      display: block;
+    }
+
+    .title-desktop {
+      display: none;
+    }
+
+    .title-mobile {
+      display: block;
+    }
+
     .menu {
       display: none;
     }
 
     .menuHamburger {
-      display: block;
+      display: flex;
+      flex-direction: row-reverse;
 
       button {
-        position: fixed;
-        padding-top: 5px;
-        top: 10px;
-        right: 20px;
+        position: relative;
+        // padding-top: 5px;
+        top: 16px;
+        // right: 20px;
         background: none;
         border: none;
         display: flex;
@@ -140,10 +166,12 @@
         background-color: rgba(0, 0, 0, 0.9);
         backdrop-filter: blur(2px);
         z-index: 4 !important;
-        // transition: 0.4s all cubic-bezier(0.19, 0.76, 0.27, 0.88);
+        transition: 0.2s all cubic-bezier(0, 0, 0, 1);
       }
 
       .menuHamburgerMenu {
+        transition: .2s all cubic-bezier(0,0, 0, 1);
+        transition-delay: 0.1s;
         position: fixed;
         top: 0;
         width: 100%;
@@ -151,13 +179,19 @@
         z-index: 5 !important;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: center;
         padding: 40% 0;
         // transition: 0.3s all cubic-bezier(0.19, 0.76, 0.27, 0.88);
         // transition-delay: 0.3s;
 
-        a {
-          font-size: 2rem;
+        a.menuItem {
+          font-size: 18px;
+          margin-bottom: 20px;
+        }
+
+        a.title {
+          font-size: 20px;
+          margin-bottom: 100px;
         }
       }
     }

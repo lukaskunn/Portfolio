@@ -24,6 +24,14 @@
     }
 }
 
+@media (max-width: 768px) {
+    .scrollPageIconContainer {
+        bottom: 20px;
+        left: 0;
+    }
+    
+}
+
 @keyframes showText {
     from {
         padding-top: 20px;

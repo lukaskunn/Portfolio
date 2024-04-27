@@ -44,3 +44,28 @@
         }
     }
 }
+
+@media (max-width: 768px) {
+    .skills-container {
+        padding: 40px 20px 120px;
+
+        h2 {
+            font-size: 4rem;
+            margin-bottom: 40px;
+        }
+
+        .skills-sub-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+
+            .soft-skills, .hard-skills {
+                width: 100%;
+                padding: 0;
+            }
+        }
+    }
+    
+}

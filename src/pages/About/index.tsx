@@ -22,7 +22,6 @@ function About() {
   const { soft, hard } = skills;
 
   useEffect(() => {
-    console.log(document.body.style.overflowX);
     document.body.style.overflowX = "auto";
   }, []);
 
@@ -58,7 +57,7 @@ function About() {
       <section className={resumeStyles.container}>
         <div className={resumeStyles.resume} id="resume">
           <div className={resumeStyles.resume__left}>
-            <h2>{sectionTitleResume}</h2>
+            <h2 className={resumeStyles["section-title"]}>{sectionTitleResume}</h2>
             <div className={resumeStyles.colletions}>
               {cards.map((card: any, index: any) => {
                 const { jobTitle, description, startDate, endDate, company } =

@@ -1,24 +1,45 @@
-import { motion } from "framer-motion";
+import { color, delay, motion } from "framer-motion";
 import React from "react";
 // import SVG from "../SVGBackground";
+import useIsMobile from "../../hooks/isMobile";
 import { PageContext } from "../../contexts/PageContext";
 
 const InitialTransition = () => {
   const { language } = React.useContext(PageContext) as any;
   const {transitionsText} = language;
   const {quotes} = transitionsText;
+  const isMobile = useIsMobile();
+  const [dimensions, setDimensions] = React.useState({
+    height: 0,
+    width: 0,
+  });
+
+  React.useEffect(() => {
+    const resize = () => {
+      setDimensions({
+        height: window.innerHeight,
+        width: window.innerWidth,
+      });
+    };
+
+    resize();
+    window.addEventListener("resize", resize);
+    return () => window.removeEventListener("resize", resize);
+  }, []);
+
 
   const blackBox = {
     initial: {
-      height: "100vh",
-      top: 0,
+      top: "-300px",
+      backgroundColor: "rgb(0, 0, 0)"
     },
     animate: {
-      height: 0,
+      top: "-1500px",
+      backgroundColor: "rgb(212, 212, 216)",
       transition: {
         when: "afterChildren",
-        duration: 1.5,
-        ease: [0.87, 0, 0.13, 1],
+        duration: 1.2,
+        ease: [0.85, 0, 0.15, 1],
       },
       transitionEnd: {
         display: "none",
@@ -51,6 +72,16 @@ const InitialTransition = () => {
       },
     },
   };
+  const initialPath = `path('M0 300 Q${dimensions.width / 2} 300 ${dimensions.width} 300 L${dimensions.width} ${dimensions.height + 300} Q${dimensions.width / 2} ${isMobile ? dimensions.height + 400 : dimensions.height + 400} 0 ${dimensions.height + 300} L0 300')`;
+
+  const transitionBackgroundStyles = {
+    backgroundColor: "red",
+    height: "calc(100vh + 600px)",
+    width: "100vw",
+    top: "-300px",
+    clipPath: initialPath,
+  };
+
   
   return (
     <div
@@ -58,7 +89,8 @@ const InitialTransition = () => {
       style={{ zIndex: 997, pointerEvents: "none" }}
     >
       <motion.div
-        className="absolute z-50 flex items-center justify-center w-full bg-zinc-300"
+        className="absolute z-50 flex items-center justify-center w-full"
+        style={transitionBackgroundStyles}
         initial="initial"
         animate="animate"
         variants={blackBox}
@@ -76,7 +108,7 @@ const InitialTransition = () => {
             patternUnits="userSpaceOnUse"
             width={1000}
             height={800}
-            className="text-black"
+            className="text-zinc-300"
           >
             <rect className="w-full h-full fill-current" />
             <motion.rect
