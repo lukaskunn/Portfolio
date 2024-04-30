@@ -3,7 +3,6 @@ import styles from "../../styles/ImageBackground.module.scss";
 import axios from "axios";
 import { PageContext } from "../../contexts/PageContext";
 import useMousePosition from "../../hooks/UseMousePosition";
-import { transform } from "next/dist/build/swc";
 function ImageBackground() {
   //TODO: Fix any type
   const {setIsLoaded} = React.useContext(PageContext) as any;
