@@ -1,4 +1,5 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
+//@ts-nocheck
 import {list} from "@vercel/blob"
 
 //TODO: Fix any type

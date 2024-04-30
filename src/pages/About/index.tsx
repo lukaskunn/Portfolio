@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import about from "../../styles/About.module.scss";
 import resumeStyles from "../../styles/Resume.module.scss";
 import styles from "../../styles/Skills.module.scss";
-import Image from "next/image";
 import { PageContext } from "../../contexts/PageContext";
 import ResumeCard from "../../components/ResumeCard";
 import Curve from "../../Layouts/Curve";
@@ -13,7 +12,6 @@ function About() {
   const { language, setHoverImportantText } = React.useContext(PageContext) as any;
   const { aboutMe, resume, services } = language; 
   const {
-    sectionTitle: sectionTitleAboutMe,
     nextPageText,
     sectionSubTitle,
     content,

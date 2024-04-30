@@ -1,5 +1,4 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-import { list } from "@vercel/blob";
 import englishContent from "../../../content/en.json";
 import portugueseContent from "../../../content/pt.json";
 
