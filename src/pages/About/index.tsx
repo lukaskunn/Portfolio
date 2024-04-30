@@ -7,10 +7,11 @@ import { PageContext } from "../../contexts/PageContext";
 import ResumeCard from "../../components/ResumeCard";
 import Curve from "../../Layouts/Curve";
 import NextPageButton from "../../components/NextPageButton";
+import {useHover} from "usehooks-ts"
 
 function About() {
-  const { language } = React.useContext(PageContext) as any;
-  const { aboutMe, resume, services } = language;
+  const { language, setHoverImportantText } = React.useContext(PageContext) as any;
+  const { aboutMe, resume, services } = language; 
   const {
     sectionTitle: sectionTitleAboutMe,
     nextPageText,
@@ -20,6 +21,24 @@ function About() {
   const { sectionTitle: sectionTitleResume, cards } = resume;
   const { sectionTitle: sectionTitleServices, skills } = services;
   const { soft, hard } = skills;
+  const aboutTitleRef = React.useRef(null);
+  const aboutMeRef = React.useRef(null);
+  const aboutBackgroundRef = React.useRef(null);
+  const resumeRef = React.useRef(null);
+  const skillsRef = React.useRef(null);
+  const aboutTitleIsHover = useHover(aboutTitleRef);
+  const aboutMeIsHover = useHover(aboutMeRef);
+  const aboutBackgroundIsHover = useHover(aboutBackgroundRef);
+  const resumeIsHover = useHover(resumeRef);
+  const skillsIsHover = useHover(skillsRef);
+
+  useEffect(() => {
+    if (aboutTitleIsHover|| aboutMeIsHover|| aboutBackgroundIsHover|| resumeIsHover || skillsIsHover) {
+      setHoverImportantText(true)
+    } else {
+      setHoverImportantText(false)
+    }
+  }, [aboutTitleIsHover, aboutMeIsHover, aboutBackgroundIsHover, resumeIsHover, skillsIsHover]);
 
   useEffect(() => {
     document.body.style.overflowX = "auto";
@@ -37,14 +56,14 @@ function About() {
             />
           </div>
           <div className={about.about__right}>
-            <h2>{sectionSubTitle}</h2>
-            <section className={about.about__right__aboutMe}>
+            <h2 ref={aboutTitleRef}>{sectionSubTitle}</h2>
+            <section className={about.about__right__aboutMe} ref={aboutMeRef}>
               <h2>{content[0].title}</h2>
               {content[0].text.map((element: any, index: any) => {
                 return <h4 key={index}>{element}</h4>;
               })}
             </section>
-            <section className={about.about__right__background}>
+            <section className={about.about__right__background} ref={aboutBackgroundRef}>
               <h2>{content[1].title}</h2>
               {content[1].text.map((element: any, index: any) => {
                 return <h4 key={index}>{element}</h4>;
@@ -58,7 +77,7 @@ function About() {
         <div className={resumeStyles.resume} id="resume">
           <div className={resumeStyles.resume__left}>
             <h2 className={resumeStyles["section-title"]}>{sectionTitleResume}</h2>
-            <div className={resumeStyles.colletions}>
+            <div className={resumeStyles.colletions} ref={resumeRef}>
               {cards.map((card: any, index: any) => {
                 const { jobTitle, description, startDate, endDate, company } =
                   card;
@@ -86,9 +105,9 @@ function About() {
           </div>
         </div>
       </section>
-      <section className={styles["skills-container"]} id="">
+      <section className={styles["skills-container"]}>
         <h2>{sectionTitleServices}</h2>
-        <div className={styles["skills-sub-container"]}>
+        <div className={styles["skills-sub-container"]} ref={skillsRef}>
           <div className={styles["soft-skills"]}>
             <h3 className={styles["group-title"]}>{`[Soft Skills]`}</h3>
             {soft.map((skill: any, index: any) => {
@@ -111,7 +130,7 @@ function About() {
           </div>
         </div>
       </section>
-      <NextPageButton link="/Contact" text={nextPageText} />
+      <NextPageButton link="/Contact" text={nextPageText} type="forward" showBackground={true}/>
     </Curve>
   );
 }

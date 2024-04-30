@@ -15,7 +15,7 @@
         "text": "/ Contact",
         "href": "/Contact"
       }
-    ] 
+    ]
   },
   "header": {
     "headerTitle": "<Lucas Oliveira />",
@@ -32,7 +32,7 @@
         "text": "/Contact",
         "href": "/Contact"
       }
-    ] 
+    ]
   },
   "transitionsText": {
     "routesTexts": {
@@ -41,6 +41,12 @@
       "/About": "About Me",
       "/Contact": "Contact"
     },
+    "projectsTexts": [
+      "[PROJECT]: Motorola India",
+      "[PROJECT]: Motorola US",
+      "[PROJECT]: Karsten / Trussardi",
+      "[PROJECT]: BabadoTop"
+    ],
     "quotes": [
       "“The best revenge is not to be like your enemy.” – Marcus Aurelius",
       "“The best way to predict the future is to create it.” – Peter Drucker",
@@ -60,32 +66,96 @@
       "title": "projects i worked on.",
       "projects": [
         {
-          "projectTitle": "Motorola India",
-          "description": "My current project in my job. I work for the Motorola India team being the main developer. In this project we developing the Motorola India new E-commerce Store. I work as a dev lead in this project helping other developers and doing the most difficult tasks. I learned how to be more accessible to my team and i could improve my knowledge about React and Vtex IO. Beside this project, i was able to learn a lot of english in fact i have a meeting everyday with the Motorola India Project Manager to align the project progress",
-          "background": "https://i.imgur.com/zHoT8tu.png",
+          "projectId": "1",
+          "title": "[Motorola India]",
+          "description": "Ecommerce + React",
+          "briefDescription": "During my tenure with the Motorola India team, I served as the lead developer on a pivotal project: the development of the Motorola India E-commerce Store. In this capacity, I assumed the role of both a developer and a mentor, guiding fellow team members while tackling the most complex challenges head-on.</>This project provided me with invaluable opportunities for personal and professional growth. Notably, I honed my leadership skills, fostering a more accessible and collaborative environment within our team. Through hands-on experience with cutting-edge technologies such as React and Vtex IO, I expanded my technical expertise significantly. </>Throughout the development cycle, I played a key role in implementing numerous features and resolving critical issues. One standout accomplishment was the optimization of an autofill function during the checkout process, drastically reducing the time required from approximately 15 seconds to a mere 2 seconds. This enhancement streamlined the user experience and significantly boosted efficiency.</>Beyond technical accomplishments, my time with Motorola India also presented opportunities for linguistic development. Engaging in daily meetings with the Motorola India Project Manager, I sharpened my English language skills while ensuring seamless project alignment and progress tracking.",
           "urlToProject": "https://www.motorola.in",
-          "tags": []
+          "galleryBackground": "https://i.imgur.com/zHoT8tu.png",
+          "galleryBackgroundColor": "#000",
+          "technologies": [
+            "React",
+            "Vtex IO",
+            "TypeScript",
+            "Node.js"
+          ],
+          "galleryImages": [
+            [
+              {
+                "front": "https://i.imgur.com/zHoT8tu.png",
+                "back": "https://i.imgur.com/zHoT8tu.png",
+                "photoText": "[Motorola India Home Page]"
+              }
+            ]
+          ]
         },
         {
-          "projectTitle": "Motorola US",
-          "description": "My current project at my job. I work for the Motorola India team, being the main developer. We are creating the Motorola India new E-commerce Store for this project. I work as a developer lead on this project, helping other developers, doing code reviews, and doing the most difficult tasks. I learned how to be more accessible to my team and i could improve my knowledge of React and Vtex IO. Besides this project, i was able to learn a lot of English. In fact, i have a meeting every day with the Motorola India Project Manager to align the project's progress.",
-          "background": "https://i.imgur.com/EXM3era.png",
-          "urlToProject": "www.motorola.com/us/smartphones-motorola-edge-plus-gen-2/p",
-          "tags": []
+          "projectId": "2",
+          "title": "[Motorola US]",
+          "description": "Ecommerce + React",
+          "briefDescription": "My inaugural project with Vtex IO marked a pivotal moment in my career journey. Tasked with developing key components for the launch of the Edge 30 Pro product page, I collaborated within a dedicated team environment. </> This project provided me with the unique opportunity to interface directly with the marketing team at Motorola USA. This exposure not only enriched my understanding of web development but also fostered invaluable insights into the intersection of technology and marketing strategies. </> Working alongside seasoned developers, I immersed myself in the intricacies of web development, refining my skills and techniques. Moreover, this project served as a catalyst for my English language proficiency, as I embraced the challenge of effectively communicating with international stakeholders.",
+          "urlToProject": "https://www.motorola.in",
+          "galleryBackground": "https://i.imgur.com/EXM3era.png",
+          "galleryBackgroundColor": "#c6c6c6",
+          "technologies": [
+            "React",
+            "Vtex IO",
+            "TypeScript",
+            "Node.js"
+          ],
+          "galleryImages": [
+            [
+              {
+                "front": "https://i.imgur.com/EXM3era.png",
+                "back": "https://i.imgur.com/EXM3era.png",
+                "photoText": "[Edge 30 PRO Page]"
+              }
+            ]
+          ]
         },
         {
-          "projectTitle": "Karsten / Trussardi",
-          "description": "I worked for Karsten and Trussardi e-commerce stores, developing new features and fixing old ones. I started to work with front-end in these two stores, and i learned a lot about the front-end and vtex. I worked with vtex legacy with HTML and CSS",
-          "background": "https://i.imgur.com/nQOAGmi.png",
+          "projectId": "3",
+          "title": "Karsten / Trussardi",
+          "description": "Ecommerce + React",
+          "briefDescription": "My tenure with Karsten and Trussardi e-commerce stores was instrumental in shaping my expertise in front-end development and Vtex platform utilization. Tasked with developing new features and resolving existing issues, I delved deep into the intricacies of front-end development within the Vtex ecosystem.</>Operating within the realm of Vtex legacy, I honed my skills in HTML and CSS, leveraging these foundational technologies to enhance the user experience and functionality of both platforms. This hands-on experience not only expanded my technical repertoire but also instilled in me a deep understanding of front-end principles and best practices.",
           "urlToProject": "https://www.karsten.com.br",
-          "tags": []
+          "galleryBackground": "https://i.imgur.com/nQOAGmi.png",
+          "galleryBackgroundColor": "orange",
+          "technologies": [
+            "React",
+            "Vtex Legacy"
+          ],
+          "galleryImages": [
+            [
+              {
+                "front": "https://i.imgur.com/nQOAGmi.png",
+                "back": "https://i.imgur.com/nQOAGmi.png",
+                "photoText": "[Trussardi Home Page]"
+              }
+            ]
+          ]
         },
         {
-          "projectTitle": "BabadoTop",
-          "description": "The hardest storefront I've ever worked at. I worked for two months and I learned a lot about ReactJS and advanced features. In this store, i created a component that worked like an Instagram story. This component shows a fitting room and a shelf for the customer to buy the products that they are seeing. I worked with vtex legacy with HTML and CSS for this store, and creating some custom components with ReactJS",
-          "background": "https://i.imgur.com/EsOEylE.png",
+          "projectId": "4",
+          "title": "BabadoTop",
+          "description": "Ecommerce + React",
+          "briefDescription": "My experience at this particular storefront proved to be one of the most challenging yet rewarding endeavors in my career journey. Over the span of two intense months, I immersed myself in the world of ReactJS, delving into its advanced features and pushing the boundaries of my technical skill set. </> During my tenure, I conceptualized and developed a groundbreaking component reminiscent of an Instagram story. This innovative feature seamlessly integrated a virtual fitting room with a customizable shelf, empowering customers to visualize products in a dynamic and engaging manner while facilitating effortless purchasing decisions. </> Harnessing the power of Vtex legacy alongside HTML and CSS, I crafted bespoke solutions tailored to the unique requirements of the storefront. Additionally, I leveraged my newfound expertise in ReactJS to create custom components that elevated the user experience to new heights. </> My time at this storefront not only deepened my understanding of front-end development but also underscored the importance of innovation and adaptability in the ever-evolving landscape of e-commerce. Through perseverance and creative problem-solving, I overcame formidable challenges and emerged with newfound confidence and proficiency in ReactJS and e-commerce development.",
+          "galleryBackground": "https://i.imgur.com/EsOEylE.png",
+          "galleryBackgroundColor": "blue",
           "urlToProject": "https://www.babadotop.com.br",
-          "tags": []
+          "technologies": [
+            "React",
+            "Vtex Legacy"
+          ],
+          "galleryImages": [
+            [
+              {
+                "front": "https://i.imgur.com/EsOEylE.png",
+                "back": "https://i.imgur.com/EsOEylE.png",
+                "photoText": "[Babadotop Home Page]"
+              }
+            ]
+          ]
         }
       ]
     }

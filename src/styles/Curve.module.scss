@@ -3,6 +3,7 @@
         background: #0c0c0c;
     }
     .route-name {
+        pointer-events: none;
         position: absolute;
         top: 40%;
         left: 50%;
@@ -10,6 +11,7 @@
         color: #0c0c0c;
         font-size: 46px;
         z-index: 999;
+        text-align: center;
     }
     .transition-svg, .transition-svg2 {
         width: 100vw;

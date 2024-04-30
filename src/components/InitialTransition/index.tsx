@@ -1,6 +1,5 @@
-import { color, delay, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import React from "react";
-// import SVG from "../SVGBackground";
 import useIsMobile from "../../hooks/isMobile";
 import { PageContext } from "../../contexts/PageContext";
 

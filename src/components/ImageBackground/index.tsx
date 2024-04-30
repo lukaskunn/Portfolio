@@ -48,7 +48,7 @@ React.useEffect(() => {
 
 const backgroundImageStyles = {
   left: `${-((mousePosition.x / dimensions.width) - 0.5) * 30}px`,
-  top: `${(-((mousePosition.y / dimensions.height) - 0.5) * 30) + 70}px`,
+  top: `${(-((mousePosition.y / dimensions.height) - 0.5) * 30) + 100}px`,
   transform: `rotateX(${((mousePosition.y / dimensions.height) - 0.5) * -15}deg) rotateY(${((mousePosition.x / dimensions.width) - 0.5) * 15}deg)`
 }
 

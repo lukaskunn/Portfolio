@@ -8,13 +8,14 @@ import { PageContext } from "../../contexts/PageContext";
 import useIsMobile from "../../hooks/isMobile";
 interface ICurve {
   children: React.ReactNode;
+  isProjectPage?: boolean;
 }
 
 const Curve = (props: ICurve) => {
-  const { children } = props;
+  const { children, isProjectPage } = props;
   const { language } = React.useContext(PageContext) as any;
   const {transitionsText} = language;
-  const {routesTexts} = transitionsText;
+  const {routesTexts, projectsTexts} = transitionsText;
   const router = useRouter();
   const isMobile = useIsMobile();
   const [dimensions, setDimensions] = React.useState({
@@ -48,7 +49,7 @@ const Curve = (props: ICurve) => {
         ease: [0.75, 0, 0.24, 1],
       },
       transitionEnd: {
-        top: "47.5%",
+        top: "47.5%"
       },
     },
     exit: {
@@ -70,7 +71,7 @@ const Curve = (props: ICurve) => {
       />
 
       <motion.p {...getAnimationProps(text)} className={styles["route-name"]}>
-        {routesTexts[router.route]}
+        {isProjectPage ? projectsTexts[Number(router.query.id) - 1] : routesTexts[router.route]}
       </motion.p>
       {dimensions.width > 0 && <SVG {...dimensions} isMobile={isMobile}/>}
       {children}

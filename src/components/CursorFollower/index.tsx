@@ -5,15 +5,17 @@ import cursorFollowerStyles from "../../styles/CursorFollower.module.scss";
 
 function CursorFollower() {
   const mousePosition = useMousePosition();
-  const { isLoaded } = React.useContext(PageContext) as any;
+  const { isLoaded, hoverImportantText } = React.useContext(PageContext) as any;
 
   return (
     isLoaded && (
       <div
         className={cursorFollowerStyles["white-circle"]}
         style={{
-          top: mousePosition?.y - 25,
-          left: mousePosition?.x - 25,
+          top: mousePosition?.y,
+          left: mousePosition?.x,
+          width: hoverImportantText ? "100px" : "40px",
+          height: hoverImportantText ? "100px" : "40px",
         }}
       />
     )

@@ -1,17 +1,27 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import styles from "../../styles/NextPageButton.module.scss";
 import Link from "next/link";
-import { FiChevronDown } from "react-icons/fi";
-import { FaArrowRight } from "react-icons/fa6"
-import { GoArrowRight } from "react-icons/go";
-
+import { GoArrowRight, GoArrowLeft } from "react-icons/go";
 interface INextPageButton {
-    link: string;
-    text: string
+  link: string;
+  text: string;
+  type?: "forward" | "backward";
+  showBackground?: boolean;
 }
 
-const NextPageButton = ({link, text}: INextPageButton) => {
-    const [hover, setHover] = useState(false);
+const NextPageButton = ({
+  link,
+  text,
+  type,
+  showBackground,
+}: INextPageButton) => {
+  const [hover, setHover] = useState(false);
+
+  const buttonContainerStyle = {
+    color: showBackground ? hover ? "#0c0c0c" : "#bebebe" : hover ? "white" : "#bebebe" ,
+    background: showBackground ? hover ? "#ffffff" : "#414141" : "none",
+  };
+
   return (
     <div className={styles.scrollPageIconContainer}>
       <Link
@@ -19,9 +29,30 @@ const NextPageButton = ({link, text}: INextPageButton) => {
         className={styles.scrollPage}
         onMouseEnter={() => setHover(true)}
         onMouseLeave={() => setHover(false)}
-        style={{ color: hover ? "#c5c5c5" : "white" }}
+        style={buttonContainerStyle}
+        scroll={false}
       >
-        {text} <GoArrowRight size={40} color={hover ? "#c5c5c5" : "white"} style={{transition: ".2s all cubic-bezier(0, 0, 0, 1)", marginLeft: !hover ? "20px" : "40px"}}/>
+        {type === "backward" && (
+          <GoArrowLeft
+            size={30}
+            color={showBackground ? hover ? "#0c0c0c" : "#bebebe" : hover ? "white" : "#bebebe"}
+            className={styles["left-arrow"]}
+            style={{
+              marginRight: !hover ? "20px" : "40px",
+            }}
+          />
+        )}
+        <p>{text} </p>
+        {type === "forward" && (
+          <GoArrowRight
+            size={30}
+            color={showBackground ? hover ? "#0c0c0c" : "#bebebe" : hover ? "white" : "#bebebe"}
+            className={styles["right-arrow"]}
+            style={{
+              marginLeft: !hover ? "20px" : "40px",
+            }}
+          />
+        )}
       </Link>
     </div>
   );

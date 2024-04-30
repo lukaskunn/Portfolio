@@ -7,20 +7,32 @@
     bottom: 50px;
 
     .scrollPage {
-        // background: #000000cc;
+        background: #ffffff99;
+        border-radius: 10px;
         display: flex;
         flex-direction: row;
         align-items: center;
         // height: 40px;
         z-index: 1;
         border: none;
-        color: white;
+        color: #0c0c0c;
         padding: 10px 20px;
         animation: showText 0.8s normal;
         animation-fill-mode: forwards;
         animation-delay: 1s;
-        opacity: 0;
         transition: 0.2s all cubic-bezier(0, 0, 0, 1);
+
+        .right-arrow, .left-arrow {
+            transition: 0.2s all cubic-bezier(0, 0, 0, 1);
+        }
+
+        svg {
+            margin-top: 10px;
+        }
+
+        p {
+            margin-top: 7px;
+        }
     }
 }
 

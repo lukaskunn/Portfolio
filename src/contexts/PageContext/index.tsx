@@ -12,9 +12,11 @@ interface PageContextProviderProps {
 export const PageContextProvider = (props: PageContextProviderProps) => {
   const {children} = props;
   const [language, setLanguage] = useState(langPT);
+  const [currentLanguage, setCurrentLanguage] = useState("pt" as "pt" | "en");
   const [showTransition, setShowTransition] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
   const [firstLoad, setFirstLoad] = useState(true);
+  const [hoverImportantText, setHoverImportantText] = useState(false);
 
   const values = {
     language,
@@ -26,8 +28,19 @@ export const PageContextProvider = (props: PageContextProviderProps) => {
     isLoaded,
     setIsLoaded,
     firstLoad,
-    setFirstLoad
+    setFirstLoad,
+    currentLanguage,
+    setCurrentLanguage,
+    hoverImportantText,
+    setHoverImportantText,
   };
+
+  React.useEffect(() => {
+    if(firstLoad){
+      setCurrentLanguage("en");
+      setLanguage(langEN);
+    }
+  }, [])
 
   return (
     <PageContext.Provider

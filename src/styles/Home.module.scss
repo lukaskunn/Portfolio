@@ -18,7 +18,7 @@
   background-color: rgb(0, 0, 0);
 
   .noise-filter {
-    position: absolute;
+    position: fixed;
   top: -50%;
   left: -50%;
   right: -50%;
@@ -109,10 +109,12 @@
         animation-fill-mode: forwards;
         animation-delay: 1.4s;
         margin: 10px 0;
+        width: fit-content;
         cursor: pointer;
 
         &:hover {
           opacity: 0.8;
+          color: #747474;
         }
       }
     }
@@ -125,7 +127,7 @@
 
     .home__title {
       text-align: left;
-      width: 100%;
+      // width: 100%;
       padding-left: 0;
 
       .title {

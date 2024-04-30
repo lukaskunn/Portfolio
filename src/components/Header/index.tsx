@@ -4,13 +4,11 @@ import headerStyles from "../../styles/header.module.scss";
 import { MdClose, MdMenu } from "react-icons/md";
 import { PageContext } from "../../contexts/PageContext";
 import Link from "next/link";
-import { useRouter } from "next/router";
 function Header() {
   const [headerBackground, setHeaderBackground] = useState("none");
   const [menuHamburgerIsOpen, setMenuHamburgerIsOpen] = useState(false);
   const [englishSelected, setEnglishSelected] = useState(true);
-  const router = useRouter();
-  const { language, setLanguage, langEN, langPT } = React.useContext(
+  const { language, setLanguage, langEN, langPT, setCurrentLanguage } = React.useContext(
     PageContext
   ) as any;
 
@@ -18,7 +16,7 @@ function Header() {
   const { headerTitle, menuItems } = header;
 
   const listenScrollEvent = () => {
-    if (window.scrollY < 200) {
+    if (window.scrollY < 200 || window.innerWidth < 768) {
       return setHeaderBackground("none");
     } else {
       return setHeaderBackground("black");
@@ -31,10 +29,12 @@ function Header() {
 
   const setLanguageToEnglish = () => {
     setLanguage(langEN);
+    setCurrentLanguage("en")
     setEnglishSelected(true);
   };
   const setLanguageToPortuguese = () => {
     setLanguage(langPT);
+    setCurrentLanguage("pt")
     setEnglishSelected(false);
   };
 
@@ -102,11 +102,12 @@ function Header() {
         <button
           className={headerStyles.handleMenuHamburger}
           onClick={handleMenuHamburger}
+          style={{background: menuHamburgerIsOpen ? "none" : "#ffffff"}}
         >
           {menuHamburgerIsOpen ? (
             <MdClose style={{ color: "white" }} size="2em" />
           ) : (
-            <MdMenu style={{ color: "white" }} size="2em" />
+            <MdMenu style={{ color: "black" }} size="2em" />
           )}
         </button>
 

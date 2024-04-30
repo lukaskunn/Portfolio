@@ -9,10 +9,6 @@ interface ISVG {
 }
 
 const SVG = ({ width, height, isMobile }: ISVG) => {
-  React.useEffect(() => {
-    console.log("is Mobile", isMobile);
-  }, [isMobile]);
-
   const initialPath = `
           M0 300
           Q${width / 2} 200 ${width} 300

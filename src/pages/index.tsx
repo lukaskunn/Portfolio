@@ -7,23 +7,22 @@ import ImageBackground from "../components/ImageBackground";
 import Curve from "../Layouts/Curve";
 import InitialTransition from "../components/InitialTransition";
 import NextPageButton from "../components/NextPageButton";
-
+import useIsMobile from "../hooks/isMobile";
 const Home: NextPage = () => {
-  const { language, firstLoad } = React.useContext(
-    PageContext
-  ) as any;
+  const { language, firstLoad } = React.useContext(PageContext) as any;
 
-  const {landing} = language;
-  const {sectionTitle, nextPageText, menuItems} = landing;
+  const { landing } = language;
+  const { sectionTitle, nextPageText, menuItems } = landing;
+  const isMobile = useIsMobile();
 
   React.useEffect(() => {
     document.body.style.overflowX = "hidden";
-  }, [])
+  }, []);
 
   return (
     <>
       <Curve>
-        {!firstLoad && <InitialTransition />}
+        {(!firstLoad && !isMobile) && <InitialTransition />}
         <section className={styles.home}>
           <div className={styles.home__title}>
             <h1 className={styles.title}>{sectionTitle}</h1>
@@ -31,15 +30,24 @@ const Home: NextPage = () => {
               {menuItems.map((item: any, index: any) => {
                 const { text, href } = item;
                 return (
-                  <Link href={href} key={`${text}_${index}`} className={styles.initialMenu__item}>
+                  <Link
+                    href={href}
+                    key={`${text}_${index}`}
+                    className={styles.initialMenu__item}
+                  >
                     {text}
                   </Link>
-                )
+                );
               })}
             </div>
           </div>
           <ImageBackground />
-          <NextPageButton link="/Works" text={nextPageText}/>
+          <NextPageButton
+            link="/Works"
+            text={nextPageText}
+            type="forward"
+            showBackground={false}
+          />
           <div className={styles["noise-filter"]}></div>
         </section>
       </Curve>
