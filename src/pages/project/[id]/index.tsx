@@ -7,10 +7,13 @@ import NextPageButton from "../../../components/NextPageButton";
 import { PageContext } from "../../../contexts/PageContext";
 import axios from "axios";
 import { useHover } from "usehooks-ts";
+import loadProjectData from "../../../utils/loadProjectData";
 
 const Project = () => {
   const router = useRouter();
-  const { currentLanguage, setHoverImportantText } = React.useContext(PageContext) as any;
+  const { currentLanguage, setHoverImportantText } = React.useContext(
+    PageContext
+  ) as any;
   const [project, setProject] = React.useState<any>();
   const [projectTranslations, setProjectTranslations] = React.useState<any>();
   const projectTitleRef = React.useRef(null);
@@ -21,21 +24,31 @@ const Project = () => {
   const projectBriefDescriptionIsHover = useHover(projectBriefDescriptionRef);
 
   useEffect(() => {
-    if (projectTitleIsHover || projectDescriptionIsHover || projectBriefDescriptionIsHover) {
+    if (
+      projectTitleIsHover ||
+      projectDescriptionIsHover ||
+      projectBriefDescriptionIsHover
+    ) {
       setHoverImportantText(true);
     } else {
       setHoverImportantText(false);
     }
-  }, [projectTitleIsHover, projectDescriptionIsHover, projectBriefDescriptionIsHover]);
+  }, [
+    projectTitleIsHover,
+    projectDescriptionIsHover,
+    projectBriefDescriptionIsHover,
+  ]);
 
   useEffect(() => {
     if (router.query.id !== undefined) {
-      axios
-        .get(`http://localhost:3000/api/loadProjectContent/${router.query.id}`)
-        .then((response) => {
-          setProjectTranslations(response.data);
-          setProject(response.data[currentLanguage]);
-        });
+      const projectId = Array.isArray(router.query.id)
+        ? router.query.id[0]
+        : router.query.id;
+      const projectData: { [key: string]: any } = loadProjectData(projectId);
+      setProjectTranslations(projectData);
+      setProject(projectData[currentLanguage]);
+
+      // setProject();
     }
   }, [router.query.id]);
 
@@ -68,11 +81,19 @@ const Project = () => {
       {project !== undefined ? (
         <>
           <div className={styles["project-page-container"]}>
-            <h1 className={styles["project-title"]} ref={projectTitleRef}>{project.title}</h1>
-            <p className={styles["project-description"]} ref={projectDescriptionRef}>
+            <h1 className={styles["project-title"]} ref={projectTitleRef}>
+              {project.title}
+            </h1>
+            <p
+              className={styles["project-description"]}
+              ref={projectDescriptionRef}
+            >
               {project.description}
             </p>
-            <p className={styles["project-brief-description"]} ref={projectBriefDescriptionRef}>
+            <p
+              className={styles["project-brief-description"]}
+              ref={projectBriefDescriptionRef}
+            >
               {project.briefDescription
                 .split("</>")
                 .map((text: any, index: any) => (
