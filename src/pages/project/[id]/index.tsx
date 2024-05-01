@@ -5,7 +5,6 @@ import styles from "../../../styles/ProjectPage.module.scss";
 import ProjectPageGallery from "../../../components/ProjectPageGallery";
 import NextPageButton from "../../../components/NextPageButton";
 import { PageContext } from "../../../contexts/PageContext";
-import axios from "axios";
 import { useHover } from "usehooks-ts";
 import loadProjectData from "../../../utils/loadProjectData";
 
