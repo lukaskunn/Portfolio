@@ -45,7 +45,8 @@
       "[PROJECT]: Motorola India",
       "[PROJECT]: Motorola US",
       "[PROJECT]: Karsten / Trussardi",
-      "[PROJECT]: BabadoTop"
+      "[PROJECT]: BabadoTop",
+      "[PROJECT]: Motorola Europe"
     ],
     "quotes": [
       "“The best revenge is not to be like your enemy.” – Marcus Aurelius",
@@ -65,6 +66,52 @@
     "backgroundProjects": {
       "title": "projects i worked on.",
       "projects": [
+        {
+          "projectId": "5",
+          "title": "[Motorola Europe]",
+          "description": "Vtex IO + React",
+          "briefDescription": "In my current role at Motorola Europe, I am spearheading the development of a groundbreaking re-branded layout for the Motorola Europe e-commerce store. Collaborating closely with a team of skilled developers and designers, our mission is to elevate the online shopping experience for Motorola customers across Europe.</>Leveraging cutting-edge technologies such as Vtex IO, React, TypeScript, and Node.js, we are not only revamping the store's aesthetics but also enhancing its performance and usability. My role involves conceptualizing and implementing innovative features that seamlessly integrate into the new layout, ensuring a smooth and intuitive user journey.</> A pivotal aspect of this project has been my involvement with the Vtex API, enabling me to introduce new functionalities and optimize the store's performance. By harnessing the power of this API, we have been able to unlock new possibilities and push the boundaries of what the e-commerce platform can achieve.</>One of the most rewarding achievements of this endeavor has been the creation of the new Motoverse pages layout. By developing a custom no-code builder for each page, we hpave empowered the marketing team to generate dynamic new pages autonomously, without the reliance on a developer. This innovation not only streamlines the content creation process but also fosters agility and flexibility within the organization.</>As we continue to refine and evolve the Motorola Europe e-commerce store, I am excited to be at the forefront of delivering a truly transformative digital experience for our customers.",
+          "urlToProject": "https://www.motorola.co.uk",
+          "galleryBackground": "https://pgbsmbfirsngiasjvnvy.supabase.co/storage/v1/object/public/projects/motorola_europe/motorola_europe_modal.png",
+          "galleryBackgroundColor": "#922724",
+          "technologies": [
+            "React",
+            "Vtex IO",
+            "TypeScript",
+            "Node.js"
+          ],
+          "galleryImages": [
+            [
+              {
+                "front": "https://pgbsmbfirsngiasjvnvy.supabase.co/storage/v1/object/public/projects/motorola_europe/motorola_europe_7.png",
+                "back": "https://pgbsmbfirsngiasjvnvy.supabase.co/storage/v1/object/public/projects/motorola_europe/motorola_europe_8.png",
+                "photoText": "[Motoverse Homepage]"
+              },
+              {
+                "front": "https://pgbsmbfirsngiasjvnvy.supabase.co/storage/v1/object/public/projects/motorola_europe/motorola_europe_9.png",
+                "back": "https://pgbsmbfirsngiasjvnvy.supabase.co/storage/v1/object/public/projects/motorola_europe/motorola_europe_10.png",
+                "photoText": "[Motoverse Landing Page]"
+              }
+            ],
+            [
+              {
+                "front": "https://pgbsmbfirsngiasjvnvy.supabase.co/storage/v1/object/public/projects/motorola_europe/motorola_europe_1.png",
+                "back": "https://pgbsmbfirsngiasjvnvy.supabase.co/storage/v1/object/public/projects/motorola_europe/motorola_europe_2.png",
+                "photoText": "[Homepage]"
+              },
+              {
+                "front": "https://pgbsmbfirsngiasjvnvy.supabase.co/storage/v1/object/public/projects/motorola_europe/motorola_europe_3.png",
+                "back": "https://pgbsmbfirsngiasjvnvy.supabase.co/storage/v1/object/public/projects/motorola_europe/motorola_europe_3.png",
+                "photoText": "[Product Page]"
+              },
+              {
+                "front": "https://pgbsmbfirsngiasjvnvy.supabase.co/storage/v1/object/public/projects/motorola_europe/motorola_europe_5.png",
+                "back": "https://pgbsmbfirsngiasjvnvy.supabase.co/storage/v1/object/public/projects/motorola_europe/motorola_europe_6.png",
+                "photoText": "[Family Page]"
+              }
+            ]
+          ]
+        },
         {
           "projectId": "1",
           "title": "[Motorola India]",
