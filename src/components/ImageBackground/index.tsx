@@ -1,6 +1,5 @@
 import React from "react";
 import styles from "../../styles/ImageBackground.module.scss";
-import axios from "axios";
 import { PageContext } from "../../contexts/PageContext";
 import useMousePosition from "../../hooks/UseMousePosition";
 function ImageBackground() {
