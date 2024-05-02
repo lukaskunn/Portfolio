@@ -16,7 +16,7 @@ function Header() {
   const { headerTitle, menuItems } = header;
 
   const listenScrollEvent = () => {
-    if (window.scrollY < 200 || window.innerWidth < 768) {
+    if (window.scrollY < 150 || window.innerWidth < 768) {
       return setHeaderBackground("none");
     } else {
       return setHeaderBackground("black");

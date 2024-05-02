@@ -1,10 +1,8 @@
 import React from "react";
 import styles from "../../styles/ImageBackground.module.scss";
-import { PageContext } from "../../contexts/PageContext";
 import useMousePosition from "../../hooks/UseMousePosition";
 function ImageBackground() {
   //TODO: Fix any type
-  const {setIsLoaded} = React.useContext(PageContext) as any;
   const [imagesLoaded, setImagesLoaded] = React.useState(0);
   const images = [
     "https://pgbsmbfirsngiasjvnvy.supabase.co/storage/v1/object/public/landing_page/20210803_031452-scaled.jpg",
@@ -33,12 +31,6 @@ function ImageBackground() {
     window.addEventListener("resize", resize);
     return () => window.removeEventListener("resize", resize);
   }, []);
-
-  React.useEffect(() => {
-    if(imagesLoaded === images.length) {
-      setIsLoaded(true);
-    }
-  }, [imagesLoaded, images, setIsLoaded])
 
 const backgroundImageStyles = {
   left: `${-((mousePosition.x / dimensions.width) - 0.5) * 30}px`,
