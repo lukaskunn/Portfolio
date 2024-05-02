@@ -1,0 +1,242 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+
+.header {
+  color: white;
+  width: 100vw;
+  height: 42px;
+  background: transparent;
+
+  display: grid;
+  grid-template-columns: repeat(3, minmax(10%, 1fr));
+  flex-direction: row;
+  align-items: center;
+
+  padding: 0 8%;
+  position: fixed;
+  top: 0;
+  z-index: 996;
+
+  // transition: 0.2s background ease-in-out;
+  // transition: 0.8s justify-content ease-in-out;
+  transition: .2s all cubic-bezier(0, 0, 0, 1);
+
+  font-family: "Roboto Mono", monospace;
+
+  .title {
+    font-size: 16px;
+    text-align: left;
+    margin: 0;
+    // transition: .2s all cubic-bezier(0, 0, 0, 1);
+  }
+
+  .title-desktop {
+    display: block;
+  }
+
+  .title-mobile {
+    display: none;
+  }
+
+  .spacing {
+    display: none;
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-weight: 100;
+    font-size: 14px;
+    opacity: 1;
+
+    a {
+      white-space: normal;
+      flex-wrap: nowrap;
+      transition: .2s all cubic-bezier(0, 0, 0, 1);
+    }
+    a + a {
+      margin-left: 30px;
+      // transition: .2s all cubic-bezier(0, 0, 0, 1);
+    }
+
+    a:hover {
+      opacity: 0.8;
+    }
+  }
+
+  .menuHamburger {
+    display: none;
+  }
+
+  .switchLanguageDesktop {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    cursor: pointer;
+    font-size: 16px;
+
+    // transition: .2s all cubic-bezier(0, 0, 0, 1);
+
+    h3 {
+      height: 30px;
+      width: 30px;
+      text-align: center;
+      padding-top: 1px;
+      color: rgba(255, 255, 255, 0.39);
+      margin: 0;
+    }
+
+    h3 + h3 {
+      margin-left: 10px;
+    }
+
+    .switchLanguageSelected {
+      color: white;
+      // transition: .2s all cubic-bezier(0, 0, 0, 1);
+    }
+  }
+}
+
+.header-bottom-border {
+  display: block;
+  width: 100vw;
+  background: #dadada;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  height: 4px;
+}
+
+@media (max-width: 768px) {
+  .header-bottom-border {
+    display: none;
+  }
+  .header {
+    padding: 0 30px;
+    width: 100%;
+    grid-template-columns: repeat(2, minmax(20%, 1fr));
+
+    .title {
+      width: 100%;
+      font-size: 1rem;
+    }
+
+    .spacing {
+      display: block;
+    }
+
+    .title-desktop {
+      display: none;
+    }
+
+    .title-mobile {
+      display: block;
+    }
+
+    .menu {
+      display: none;
+    }
+
+    .menuHamburger {
+      display: flex;
+      flex-direction: row-reverse;
+
+
+      button {
+        background: #fff;
+        position: relative;
+        // padding-top: 5px;
+        top: 16px;
+        // right: 20px;
+        background: #fff;
+        border-radius: 50%;
+        padding: 5px;
+        border: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: .2s all cubic-bezier(0, 0, 0, 1);
+      }
+
+      .handleMenuHamburger {
+        z-index: 6 !important;
+      }
+
+      .menuHamburgerBackground {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        backdrop-filter: blur(2px);
+        z-index: 4 !important;
+        transition: 0.2s all cubic-bezier(0, 0, 0, 1);
+      }
+
+      .menuHamburgerMenu {
+        transition: .2s all cubic-bezier(0,0, 0, 1);
+        transition-delay: 0.1s;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 5 !important;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 40% 0;
+        // transition: 0.3s all cubic-bezier(0.19, 0.76, 0.27, 0.88);
+        // transition-delay: 0.3s;
+
+        a.menuItem {
+          font-size: 18px;
+          margin-bottom: 20px;
+        }
+
+        a.title {
+          font-size: 20px;
+          margin-bottom: 100px;
+        }
+      }
+    }
+    .switchLanguageDesktop {
+      display: none !important;
+    }
+    .switchLanguageMobile {
+      display: flex;
+      flex-direction: row;
+      margin-top: 100px;
+      align-items: center;
+      cursor: pointer;
+
+      h3 {
+        height: 30px;
+        width: 30px;
+        text-align: center;
+        padding-top: 1px;
+        color: rgba(255, 255, 255, 0.39);
+      }
+
+      h3 + h3 {
+        margin-left: 10px;
+      }
+
+      .switchLanguageSelected {
+        color: white;
+        // transition: .2s all cubic-bezier(0, 0, 0, 1);
+      }
+    }
+  }
+}
+
+// @keyframes showText {
+//   from {
+//     padding-top: 20px;
+//     opacity: 0;
+//   }
+//   to {
+//     padding-top: 0px;
+//     opacity: 1;
+//   }
+// }

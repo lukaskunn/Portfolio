@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;1,400&display=swap");
+
+.contactContainer {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(10, 10, 10);
+  color: white;
+  font-family: "Roboto Mono", monospace;
+  display: flex;
+  justify-content: center;
+}
+
+.contact {
+  width: 100%;
+  max-width: 1920px;
+  height: 100%;
+  padding: 10vh 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+  }
+
+  p {
+    font-size: 1.5rem;
+    font-weight: 100;
+    margin-bottom: 10px;
+
+    a {
+      font-weight: 600;
+    }
+  }
+
+  img {
+    width: 450px;
+    filter: brightness(0.4) grayscale(80%);
+  }
+}
+
+@media (max-width: 768px) {
+  .contact {
+    width: 100%;
+    max-width: 426px;
+    height: 100%;
+    padding: 10vh 30px;
+    flex-direction: column-reverse;
+    justify-content: center;
+
+    .contactSide {
+      width: 100%;
+      margin-top: 40px;
+    }
+
+    h2 {
+      font-size: 2.5rem;
+      margin-bottom: 50px;
+    }
+
+    p {
+      font-size: 1rem;
+      font-weight: 100;
+
+      a {
+        font-weight: 600;
+      }
+    }
+
+    // img {
+    //   display: none;
+    // }
+  }
+}
