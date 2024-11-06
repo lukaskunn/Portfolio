@@ -1,9 +1,9 @@
 import React from "react";
+import { useRouter } from "next/router";
+import { motion } from "framer-motion";
 import styles from "../../styles/Curve.module.scss";
 import getAnimationProps from "../../utils/getAnimationProps";
 import SVG from "../../components/SVGBackground";
-import { useRouter } from "next/router";
-import { motion } from "framer-motion";
 import { PageContext } from "../../contexts/PageContext";
 import useIsMobile from "../../hooks/isMobile";
 interface ICurve {

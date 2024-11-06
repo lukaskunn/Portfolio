@@ -1,18 +1,18 @@
 import React from "react";
 import styles from "../../styles/ImageBackground.module.scss";
 import useMousePosition from "../../hooks/UseMousePosition";
+import Image from "next/image";
 function ImageBackground() {
-  //TODO: Fix any type
   const [imagesLoaded, setImagesLoaded] = React.useState(0);
   const images = [
-    "https://pgbsmbfirsngiasjvnvy.supabase.co/storage/v1/object/public/landing_page/20210803_031452-scaled.jpg",
-      "https://pgbsmbfirsngiasjvnvy.supabase.co/storage/v1/object/public/landing_page/27159639._SX540_.jpg",
-      "https://pgbsmbfirsngiasjvnvy.supabase.co/storage/v1/object/public/landing_page/4c7ff6256079957c2770ea922741815e.jpg",
-      "https://pgbsmbfirsngiasjvnvy.supabase.co/storage/v1/object/public/landing_page/7108634.png",
-      "https://pgbsmbfirsngiasjvnvy.supabase.co/storage/v1/object/public/landing_page/Ghost-in-the-shell_ButWhyTho.png",
-      "https://pgbsmbfirsngiasjvnvy.supabase.co/storage/v1/object/public/landing_page/alita-.png",
-      "https://pgbsmbfirsngiasjvnvy.supabase.co/storage/v1/object/public/landing_page/images.jpg"
-  ]
+    "/images/general/20210803_031452-scaled.jpg",
+    "/images/general/27159639._SX540_.jpg",
+    "/images/general/4c7ff6256079957c2770ea922741815e.jpg",
+    "/images/general/7108634.png",
+    "/images/general/Ghost-in-the-shell_ButWhyTho.png",
+    "/images/general/alita-.png",
+    "/images/general/images.jpg",
+  ];
   const mousePosition = useMousePosition();
   const [dimensions, setDimensions] = React.useState({
     width: 0,
@@ -32,20 +32,26 @@ function ImageBackground() {
     return () => window.removeEventListener("resize", resize);
   }, []);
 
-const backgroundImageStyles = {
-  left: `${-((mousePosition.x / dimensions.width) - 0.5) * 30}px`,
-  top: `${(-((mousePosition.y / dimensions.height) - 0.5) * 30) + 100}px`,
-  transform: `rotateX(${((mousePosition.y / dimensions.height) - 0.5) * -15}deg) rotateY(${((mousePosition.x / dimensions.width) - 0.5) * 15}deg)`
-}
+  const backgroundImageStyles = {
+    left: `${-(mousePosition.x / dimensions.width - 0.5) * 30}px`,
+    top: `${-(mousePosition.y / dimensions.height - 0.5) * 30 + 100}px`,
+    transform: `rotateX(${
+      (mousePosition.y / dimensions.height - 0.5) * -15
+    }deg) rotateY(${(mousePosition.x / dimensions.width - 0.5) * 15}deg)`,
+  };
 
   return (
     <div className={styles["img-bg-container"]} style={backgroundImageStyles}>
       {images.map((image: any, index: any) => {
         return (
-          <img
+          <Image
             alt={`image_${index + 1}`}
             src={image}
-            className={`${styles[`image_${index + 1}`]} ${styles["single-image"]}`}
+            className={`${styles[`image_${index + 1}`]} ${
+              styles["single-image"]
+            }`}
+            width={200}
+            height={200}
             key={index}
             onLoad={() => setImagesLoaded(imagesLoaded + 1)}
           />
@@ -56,3 +62,4 @@ const backgroundImageStyles = {
 }
 
 export default ImageBackground;
+
