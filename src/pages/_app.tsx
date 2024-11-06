@@ -7,6 +7,7 @@ import Loading from "../components/Loading";
 import Header from "../components/Header";
 import Head from "next/head";
 import CursorFollower from "../components/CursorFollower";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 import "../styles/globals.scss";
 import "../styles/About.module.scss";
@@ -31,6 +32,7 @@ import "../styles/ProjectPage.module.scss";
 function MyApp({ Component, pageProps, router }: AppProps) {
   return (
     <>
+      <SpeedInsights />
       <Head>
         <title>Lucas Oliveira - portfolio</title>
         <meta name="description" content="My personal portfolio" />
