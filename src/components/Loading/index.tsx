@@ -31,11 +31,11 @@ function Loading(pageRoute: any) {
   }, [isLoaded]);
 
   const loadingStyles = {
-    top: showLoading && !firstLoad && pageRoute !== "/" ? "-1000px" : "0",
+    top: showLoading && !firstLoad && pageRoute !== "/" ? "-2000px" : "0",
   };
 
   const loadingTextStyles = {
-    top: showLoading && !firstLoad && pageRoute !== "/" ? "-1000px" : "0",
+    top: showLoading && !firstLoad && pageRoute !== "/" ? "-2000px" : "0",
   };
 
   return (
