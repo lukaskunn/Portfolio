@@ -51,8 +51,10 @@
 
     a {
       white-space: normal;
+      display: inline-block;
       flex-wrap: nowrap;
       transition: .2s all cubic-bezier(0, 0, 0, 1);
+    //   min-width: 125px;
     }
     a + a {
       margin-left: 30px;

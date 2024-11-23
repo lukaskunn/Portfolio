@@ -33,11 +33,11 @@ const InitialTransition = () => {
       backgroundColor: "rgb(0, 0, 0)"
     },
     animate: {
-      top: "-1500px",
+      top: "-150%",
       backgroundColor: "rgb(212, 212, 216)",
       transition: {
         when: "afterChildren",
-        duration: 1.2,
+        duration: 2,
         ease: [0.85, 0, 0.15, 1],
       },
       transitionEnd: {
@@ -75,9 +75,9 @@ const InitialTransition = () => {
 
   const transitionBackgroundStyles = {
     backgroundColor: "red",
-    height: "calc(100vh + 600px)",
+    height: "calc(100% + 700px)",
     width: "100vw",
-    top: "-300px",
+    top: "-100%",
     clipPath: initialPath,
   };
 

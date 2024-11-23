@@ -56,7 +56,7 @@ const SVG = ({ width, height, isMobile }: ISVG) => {
         ease: [0.75, 0, 0.24, 1],
       },
       transitionEnd: {
-        top: "200vh",
+        top: "100%",
       },
     },
     exit: {

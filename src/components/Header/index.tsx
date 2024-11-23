@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { MdClose, MdMenu } from "react-icons/md";
 import Link from "next/link";
-import { usePathname } from 'next/navigation'
+import { usePathname } from "next/navigation";
 import headerStyles from "../../styles/header.module.scss";
 import { PageContext } from "../../contexts/PageContext";
 
@@ -16,7 +16,7 @@ function Header() {
 
   const { header } = language;
   const { headerTitle, menuItems } = header;
-  const pathName = usePathname()
+  const pathName = usePathname();
 
   const listenScrollEvent = () => {
     if (window.scrollY < 150 || window.innerWidth < 768) {
@@ -75,15 +75,18 @@ function Header() {
 
         <div className={headerStyles.menu}>
           {menuItems.map((item: any, index: any) => {
-            const { text, href } = item;
+            const { text, href, isExternalLink } = item;
+            console.log(text, isExternalLink);
             return (
-              <Link
+              <a
                 href={href}
                 key={`${text}_${index}`}
                 className={headerStyles.menuItem}
+                target="_blank"
+                rel="noreferrer"
               >
                 {text}
-              </Link>
+              </a>
             );
           })}
         </div>
@@ -138,9 +141,20 @@ function Header() {
               {headerTitle}
             </Link>
             {menuItems.map((item: any, index: any) => {
-              const { text, href } = item;
-              return (
+              const { text, href, isExternalLink } = item;
+              return isExternalLink ? (
+                <a
+                  href={href}
+                  key={`${text}_${index}`}
+                  className={headerStyles.menuItem}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  {text}
+                </a>
+              ) : (
                 <Link
+                  passHref
                   href={href}
                   key={`${text}_${index}`}
                   className={headerStyles.menuItem}
