@@ -15,10 +15,6 @@ const nextConfig = {
         source: "/my-stuff/:path*",
         destination: "https://personal-stuff.vercel.app/:path*",
       },
-      {
-        source: "/my-stuff-static/_next/:path*",
-        destination: "https://personal-stuff.vercel.app/my-stuff-static/_next/:path*",
-      },
     ];
   },
 };
