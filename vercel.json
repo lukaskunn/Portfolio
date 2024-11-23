@@ -2,7 +2,7 @@
     "redirects": [
         {
             "source": "/blog",
-            "destination": "blog.lucasoliveira.io",
+            "destination": "https://blog.lucasoliveira.io",
             "statusCode": 301
         }
     ],
