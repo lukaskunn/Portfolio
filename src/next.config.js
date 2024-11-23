@@ -5,6 +5,15 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: false,
   },
+  redirects() {
+    return [
+      {
+        source: '/blog',
+        destination: 'blog.lucasoliveira.io',
+        // permanent: true,
+      },
+    ]
+  },
   async rewrites() {
     return [
       {
