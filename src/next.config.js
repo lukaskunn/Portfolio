@@ -5,27 +5,23 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: false,
   },
-  redirects() {
-    return [
-      {
-        source: '/blog',
-        destination: 'blog.lucasoliveira.io',
-        // permanent: true,
-      },
-    ]
-  },
   async rewrites() {
     return [
       {
-        source: '/my-stuff',
-        destination: 'https://personal-stuff.vercel.app/',
+        source: "/my-stuff",
+        destination: "https://personal-stuff.vercel.app/my-stuff",
       },
       {
-        source: '/my-stuff/:path*',
-        destination: 'https://personal-stuff.vercel.app/:path*',
-      }
-    ]
-  }
-}
+        source: "/my-stuff/:path*",
+        destination: "https://personal-stuff.vercel.app/my-stuff/:path*",
+      },
+      {
+        source: "/my-stuff-static/_next/:path*",
+        destination: "https://personal-stuff.vercel.app/my-stuff-static/_next/:path*",
+      },
+    ];
+  },
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
+
