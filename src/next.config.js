@@ -12,12 +12,12 @@ const nextConfig = {
         destination: "https://personal-stuff.vercel.app/my-stuff",
       },
       {
-        source: "/my-stuff/:path*",
-        destination: "https://personal-stuff.vercel.app/:path*",
+        source: "/my-stuff/:path+",
+        destination: "https://personal-stuff.vercel.app/my-stuff/:path+",
       },
       {
-        source: "/my-stuff-static/_next/:path*",
-        destination: "https://personal-stuff.vercel.app/blog-static/_next/:path*",
+        source: "/my-stuff-static/_next/:path+",
+        destination: "https://personal-stuff.vercel.app/my-stuff-static/_next/:path+",
       },
     ];
   },
