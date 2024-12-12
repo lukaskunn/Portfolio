@@ -8,17 +8,17 @@ const nextConfig = {
   async rewrites() {
     return [
       {
+        source: "/:path*",
+        destination: "/:path*",
+      },
+      {
         source: "/my-stuff",
         destination: "https://personal-stuff.vercel.app/my-stuff",
       },
       {
-        source: "/my-stuff/:path+",
-        destination: "https://personal-stuff.vercel.app/my-stuff/:path+",
-      },
-      {
-        source: "/my-stuff-static/_next/:path+",
-        destination: "https://personal-stuff.vercel.app/my-stuff-static/_next/:path+",
-      },
+        source: "/my-stuff/:path*",
+        destination: "https://personal-stuff.vercel.app/my-stuff/:path*",
+      }
     ];
   },
 };
