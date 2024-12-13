@@ -71,7 +71,7 @@ const InitialTransition = () => {
       },
     },
   };
-  const initialPath = `path('M0 300 Q${dimensions.width / 2} 300 ${dimensions.width} 300 L${dimensions.width} ${dimensions.height + 300} Q${dimensions.width / 2} ${isMobile ? dimensions.height + 400 : dimensions.height + 400} 0 ${dimensions.height + 300} L0 300')`;
+  const initialPath = `path('M0 300 Q${dimensions.width / 2} 300 ${dimensions.width} 300 L${dimensions.width} ${dimensions.height + 300} Q${dimensions.width / 2} ${isMobile ? dimensions.height + 400 : dimensions.height + 350} 0 ${dimensions.height + 300} L 0 300')`;
 
   const transitionBackgroundStyles = {
     backgroundColor: "red",

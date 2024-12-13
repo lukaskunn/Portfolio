@@ -1,3 +1,4 @@
+'use client'
 import React, { useEffect, useRef } from "react";
 import styles from "../../styles/ProjectModal.module.scss";
 import Image from "./components/Image";
@@ -5,13 +6,16 @@ import { motion } from "framer-motion";
 import gsap from "gsap";
 
 interface IProjectModal {
-  modal: { isActive: boolean; index: number };
-  projects: Array<{
-    title: string;
-    description: string;
-    galleryBackgroundColor: string;
-    galleryBackground: string;
-  }>;
+  modal: {
+    isActive: boolean;
+    index: number;
+    projects: Array<{
+      title: string;
+      description: string;
+      galleryBackgroundColor: string;
+      galleryBackground: string;
+    }>;
+  };
 }
 
 const scaleAnimation = {
@@ -41,9 +45,13 @@ const scaleAnimation = {
 };
 
 const ProjectModal = (props: IProjectModal) => {
-  const { modal, projects } = props;
-  const { isActive, index } = modal;
+  const { modal } = props;
+  const { isActive, index, projects } = modal;
   const containerRef = useRef(null);
+
+  const triggerModal = () => {
+    
+  };
 
   useEffect(() => {
     const moveContainerX = gsap.quickTo(containerRef.current, "left", {
@@ -57,9 +65,11 @@ const ProjectModal = (props: IProjectModal) => {
 
     addEventListener("mousemove", (event) => {
       const { clientX, clientY } = event;
-      moveContainerX(clientX)
-      moveContainerY(clientY)
+      moveContainerX(clientX);
+      moveContainerY(clientY);
     });
+
+    triggerModal();
 
     return () => {
       removeEventListener("mousemove", () => {});
@@ -102,3 +112,4 @@ const ProjectModal = (props: IProjectModal) => {
 };
 
 export default ProjectModal;
+

@@ -9,6 +9,7 @@ function Loading(pageRoute: any) {
   const [showLoading, setShowLoading] = useState(false);
   const [loadingText, setLoadingText] = useState("");
   const [textIndex, setTextIndex] = useState(0);
+  const [showLoadingComponent, setShowLoadingComponent] = useState(true);
 
   useEffect(() => {
     const handleText = () => {
@@ -27,6 +28,10 @@ function Loading(pageRoute: any) {
     setTimeout(() => {
       setShowLoading(true);
       setFirstLoad(false);
+
+      setTimeout(() => {
+        setShowLoadingComponent(false);
+      }, 2000);
     }, 4000);
   }, [isLoaded]);
 
@@ -37,6 +42,10 @@ function Loading(pageRoute: any) {
   const loadingTextStyles = {
     top: showLoading && !firstLoad && pageRoute !== "/" ? "-2000px" : "0",
   };
+
+  if (!showLoadingComponent) {
+    return null;
+  }
 
   return (
     <div className={loading.loadingContainer} style={loadingStyles}>
@@ -49,3 +58,4 @@ function Loading(pageRoute: any) {
 }
 
 export default Loading;
+

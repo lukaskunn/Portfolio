@@ -5,25 +5,47 @@ interface IProjectItem {
   title: string;
   index: number;
   description: string;
-  setModal: (modal: { isActive: boolean; index: number }) => void;
+  updateModal: (index: number, modalIsActive: boolean) => void;
   projectId: string;
+  goToExternalPage?: boolean;
+  urlToProject?: string;
 }
 
 const ProjectItem = (props: IProjectItem) => {
-  const { title, index, setModal, description, projectId } = props;
+  const {
+    title,
+    index,
+    updateModal,
+    description,
+    projectId,
+    goToExternalPage,
+    urlToProject,
+  } = props;
 
-  return (
+  return goToExternalPage ? (
+    <a href={urlToProject}>
+      <div
+        className={styles["project-item-container"]}
+        onMouseEnter={() => updateModal(index, true)}
+        onMouseLeave={() => updateModal(index, false)}
+      >
+        <h2 className={styles["project-title"]}>{title}</h2>
+        <p className={styles["project-description"]}>{description}</p>
+      </div>
+    </a>
+  ) : (
     <Link href={`/project/${projectId}`}>
-    <div
-      className={styles["project-item-container"]}
-      onMouseEnter={() => setModal({ isActive: true, index })}
-      onMouseLeave={() => setModal({ isActive: false, index })}
-    >
-      <h2 className={styles["project-title"]}>{title}</h2>
-      <p className={styles["project-description"]}>{description}</p>
-    </div>
+      <div
+        className={styles["project-item-container"]}
+        onMouseEnter={() => updateModal(index, true)}
+        onMouseLeave={() => updateModal(index, false)}
+      >
+        <h2 className={styles["project-title"]}>{title}</h2>
+        <p className={styles["project-description"]}>{description}</p>
+      </div>
     </Link>
   );
 };
 
 export default ProjectItem;
+
